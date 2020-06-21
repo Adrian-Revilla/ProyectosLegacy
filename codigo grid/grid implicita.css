@@ -1,0 +1,54 @@
+.contenedor_pagina{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 200px 100px 200px;
+  
+ /*CON GRID-AUTO-columns Y GRID-AUTO ROWS
+CAMBIAMOS LAS PROPIEDADES DE LOS ELEMENTOS QUE NO ESTAN ESPECIFICADOS EN LOS TEMPLATES ES DECIR
+LOS QUE SE ESTABLECIERON POR AUTOMATICO :)
+GRID-AUATO-FLOW CAMBIA LA MANERA QUE CSS ACOMODA TODOS LOS ELEMENTOS, QUE SI EN ROW(DEFECTO) O
+EN COLUMNA
+cuanto el flow esta en modo row, solo le funciona grid-auto-rows
+
+
+grid-auto-flow:column;
+cuanto el flow esta en modo column, solo le funciona grid-auto-column
+grid-auto-flow:dense;  RELLENA LOS ESPACIOS EN BLANCO QUE QUEDE POR ESTIRAR LOS ELEMENTOS
+agregarlo para ver el efecto de los espacios en blanco
+grid-auto-flow:dense;
+ */
+
+grid-auto-flow: dense;
+
+
+}
+.contenedor_pagina .span3{
+background-color: red;
+grid-row: span 1;
+
+}
+.contenedor_pagina .span2{
+  background-color: green;
+  grid-row: span 2;
+}
+
+
+/*
+
+
+grid-row: span 4;
+grid-column: span 3;
+grid-row: 2/4;
+grid-column: 1/4;
+
+.contenedor_pagina .span2{
+  background-color: red;
+  grid-row: span 2;
+
+}
+.contenedor_pagina .span3{
+  background-color: green;
+ grid-column: span 3;
+}
+*/

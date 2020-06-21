@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tablas</title>
+    <style> /* CSS INTERNO */
+      *{
+        box-sizing: border-box;
+      }
+      body{margin: 0; padding: 0;}
+      section{
+        width: 50%;
+        margin: 20% auto;
+      }
+      table{
+        width: 100%;
+      }
+      table,td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section> <!--NOTA: main y section añaden semántica al código y cumplen los estándares del HTML5 -->
+        <table>
+          <caption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</caption>
+          <thead>
+            <tr>
+              <th colspan="2">Lorem ipsum dolor</th>
+              <th>sit</th>
+              <th>anim id</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">Lorem ipsum dolor sit ameinci33 didunt anim id est laborum.</td>
+              <td rowspan="2">est laborum sdf f sdf sdf</td>
+              <td>1111111</td>
+              <td>lor sit ameinci didunt anim </td>
+            </tr>
+            <tr>
+              <td>000000</td>
+              <td>lor sit ameinci didunt anim </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Lorem ipsum dolor sit ameinci didunt anim id est laborum.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
