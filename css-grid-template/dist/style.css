@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700i&display=swap');
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:F5D7D1;
+}
+header p{
+  font-family: 'Roboto' ,sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 50px;
+}
+.contenedor_pagina{
+width:90%;
+max-width: 1200px;
+margin:0 auto;
+text-align: center;
+font-size: 50px;
+font-family: 'Roboto',sans-serif;
+
+  
+}
+.contenedor_pagina div{
+  display: block;
+  padding: 20px;
+  background-color: #2f89fc;
+  color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+/*CSS GRID.*/
+.contenedor_pagina{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 200px 100px 200px;
+  
+}
+.contenedor_pagina div{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.contenedor_pagina .span2{
+  background-color: green;
+  grid-column: span 2;
+}
+.contenedor_pagina .span3{
+background-color: red;
+grid-column: 1 / -1;
+}
+.contenedor_pagina .implicito{
+  background-color:black;
+}
