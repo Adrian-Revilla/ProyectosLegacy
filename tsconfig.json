@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./prod/",
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true,
+
+    /* "typeRoots": [
+      "node_modules/@types"
+    ], */
+    "lib": [
+      "dom"
+    ]
+  }
+}

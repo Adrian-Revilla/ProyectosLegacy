@@ -1,7 +1,9 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//nota: FALTA INICIALIZAR EL PLUGIN DE BUNDLE ANALIZER
 const path = require('path');
 module.exports = env =>  {
 
@@ -10,50 +12,27 @@ module.exports = env =>  {
 
 
   
-    entry: path.resolve(__dirname, `./src/${carpeta}/entry.js`),
+    entry: path.resolve(__dirname, `./src/${carpeta}/index.ts`),
     output: {
       path: path.resolve(__dirname, './prod/'),
       filename: "bundle.js",
-      publicPath: '/'
     },
     mode: 'production',
     module: {
       rules: [
-        {
-          test: /\.html$/,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-          }
-        },
-        {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader']
-
-        },
-        {
+        { test: /\.handlebars$/, loader: "handlebars-loader" },
+        /* {
           test: /\.s[ac]ss$/i,
           use: [MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader',
           ],
-        },
+        }, */
 
         {
-          test: /\.(js|jsx)$/,
-          exclude: /(node_modules|bower_components)/,
-          include: path.resolve(__dirname, 'src'),
-          use: {
-
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              
-            }
-
-          }
-          
-
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
         },
         /* {
             test: /\.(jpg|png|jpeg)$/i,
@@ -64,14 +43,14 @@ module.exports = env =>  {
             }
             
         }, */
-        {
+        /* {
           test: /\.(ico)$/i,
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
           }
             
-        },
+        }, */
         /* {
             test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
             loader: 'url-loader',
@@ -87,6 +66,11 @@ module.exports = env =>  {
         // Options similar to the same options in webpackOptions.output
         // both options are optional
         filename: 'bundle.css'
+      }),
+      new HtmlWebpackPlugin({
+        filename:'index.html',
+        template:'src/GridTemplate/index.handlebars',
+        
       })
 
     ],
@@ -94,10 +78,10 @@ module.exports = env =>  {
       minimize: true,
       minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
     },
-    externals : {
+    /* externals : {
       react: 'React',
       'react-dom': 'ReactDOM'
-    },
+    }, */
   }
 
 }
