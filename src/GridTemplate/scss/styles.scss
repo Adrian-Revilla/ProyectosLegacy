@@ -1,0 +1,44 @@
+header, .contenedor_pagina{
+  font-family: $font-stack;
+  text-transform: $transfrom;
+  font-size: $RemSize/2;
+  color: $full-white;
+}
+
+header {
+  h1 {
+    
+    text-align: center;
+
+    span {
+      
+      text-decoration: underline;
+      text-decoration-color: $full-white;
+      padding: $RemSize/4;
+      
+      background-color: $light-black;
+      box-shadow: $boxstyle;
+    }
+  }
+}
+
+.contenedor_pagina {
+
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  section {    
+    box-shadow: $boxstyle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.firstThree{
+    background-color: #459cee;
+  }
+  section.span2, section.span4{background-color: #664CC0;}
+  section.span3{background-color: #ee231c }
+  section.implicito{background-color:#1b2343 ;}
+}

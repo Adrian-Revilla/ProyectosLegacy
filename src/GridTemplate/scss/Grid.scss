@@ -1,0 +1,14 @@
+.contenedor_pagina {
+
+  display: grid;
+  grid-gap: $RemSize/8;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 200px 100px 200px;
+
+  .span2 {
+    grid-column: span 2;
+  }
+  .span3 {
+    grid-column: 1/-1;
+  }
+}

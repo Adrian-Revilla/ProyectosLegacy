@@ -2,83 +2,80 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
-    console.log('variable', env.var1); // env.var2
+    
+    //ansi escape colors
+    const RED = '\u001b[31m%s\x1b[0m';
 
-    const carpeta = env.var1;
+    let string = "▲▲▲▲▲▲PROJECT TARGET ::" + env.var1 + ":: PROJECT TARGET▲▲▲▲▲▲";
+
+    console.log(RED, string);
+    console.log(RED,'////////////////////////////////////////////////////////')
+
+    const FOLDER = env.var1;
+    const ENTRY = path.resolve(  __dirname, `./src/${FOLDER}/index.ts`);
+    const OUTPUT = path.resolve( __dirname, `./prod/${FOLDER}/`);
+    const JSFILENAME = "bundle.js";
+    const MODE = "development";
+    
+    //LOADERS
+    const WEBPACKMODULERULES = [
+        { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
+        { test: /\.handlebars$/, loader: "handlebars-loader" },
+        { test: /\.css$/i, use: ['style-loader', 'css-loader'] },
+        { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
+
+    ];
+
+    //webpack-dev-server
+    const PORT = 4040;
+    const DEV_SERVER_PATH = path.resolve(__dirname, OUTPUT);
+
+    //plugins
+    const HTMLWEBPACKPLUGINOPTS = {
+        filename: 'index.html',
+        template: 'src/GridTemplate/index.handlebars'
+    };
 
     return {
+        entry: { main: ENTRY },        
+        output: { path: OUTPUT , filename: JSFILENAME },
+        mode: MODE,
 
-        entry: {
-            main:path.resolve(__dirname, `./src/${carpeta}/index.ts`)
+        module: { rules: WEBPACKMODULERULES },
 
-        },
-        output: {
-            path: path.resolve(__dirname, './prod/'),
-            filename: "bundle.js",
-        },
-        mode: 'development',
-        module: {
-            rules: [
-               /*  {
-                    test: /\.html$/,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                    }
-                }, */
-                {
-                    test: /\.css$/i,
-                    use: ['style-loader', 'css-loader']
+        resolve: { extensions: ['.tsx', '.ts', '.js'] },
 
-                },
-              /*   {
-                    test: /\.s[ac]ss$/i,
-                    use: ['style-loader',
-                        'css-loader',
-                        'sass-loader',
-                    ],
-                }, */
-
-                {
-                    test: /\.tsx?$/,
-                    use: 'ts-loader',
-                    exclude: /node_modules/,
-                },
-
-                /* {
-                    test: /\.(jpg|png|jpeg)$/i,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'images'
-                    }
-
-                }, */
-
-                
-
-                /* {
-                    test: /\.(ico)$/i,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                    }
-
-                }, */
-
-            ]
-        },
         plugins: [
-            new HtmlWebpackPlugin()
+            new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS)
         ],
-        resolve: {
-            extensions: [ '.tsx', '.ts', '.js' ],
-        },
-        devServer: {
-            contentBase: path.resolve(__dirname, './prod'),
-            port: 4040,
-        }
-
+        
+        devServer: { contentBase: DEV_SERVER_PATH, port: PORT, open: true, stats:'minimal' }
     }
 
 }
+
+/* {
+    test: /\.(jpg|png|jpeg)$/i,
+    loader: 'file-loader',
+    options: {
+        name: '[name].[ext]',
+        outputPath: 'images'
+    }
+
+}, */
+/* {
+    test: /\.(ico)$/i,
+    loader: 'file-loader',
+    options: {
+        name: '[name].[ext]',
+    }
+
+}, */
+/* {
+          test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
+          loader: 'url-loader',
+          options: {
+                name: '[name].[ext]',
+                outputPath:'fonts'
+              }
+            } */
