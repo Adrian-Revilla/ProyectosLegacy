@@ -49,7 +49,7 @@ module.exports = env => {
             new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS)
         ],
         
-        devServer: { contentBase: DEV_SERVER_PATH, port: PORT, open: true, stats:'minimal' }
+        devServer: { contentBase: DEV_SERVER_PATH, port: PORT, open: true, stats:'minimal',host:'0.0.0.0' }
     }
 
 }
