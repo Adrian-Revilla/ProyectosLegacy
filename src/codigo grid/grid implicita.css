@@ -23,12 +23,12 @@ grid-auto-flow: dense;
 
 
 }
-.contenedor_pagina .span3{
+.contenedor_pagina .explicit4{
 background-color: red;
 grid-row: span 1;
 
 }
-.contenedor_pagina .span2{
+.contenedor_pagina .explicit5{
   background-color: green;
   grid-row: span 2;
 }
@@ -42,12 +42,12 @@ grid-column: span 3;
 grid-row: 2/4;
 grid-column: 1/4;
 
-.contenedor_pagina .span2{
+.contenedor_pagina .explicit5{
   background-color: red;
   grid-row: span 2;
 
 }
-.contenedor_pagina .span3{
+.contenedor_pagina .explicit4{
   background-color: green;
  grid-column: span 3;
 }

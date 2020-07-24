@@ -33,12 +33,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   section.firstThree{
     background-color: #459cee;
   }
-  section.span2, section.span4{background-color: #664CC0;}
-  section.span3{background-color: #ee231c }
+  section.explicit5, section.span4{background-color: #664CC0;}
+  section.explicit4{background-color: #ee231c }
   section.implicito{background-color:#1b2343 ;}
+
+
+
 }
+
