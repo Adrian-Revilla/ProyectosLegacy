@@ -1,5 +1,5 @@
 "use strict";
-var fotos,btns,btn_seleccion,flechas;
+/* var fotos,btns,btn_seleccion,flechas;
 flechas={
     D:document.getElementById("derecha"),
     I:document.getElementById("izquierda")
@@ -53,4 +53,4 @@ function cambiar_img(arrow_btn){
     fotos[btn_seleccion].style.display="block";
 
     btns.children[btn_seleccion].className="active";    
-}
+} */

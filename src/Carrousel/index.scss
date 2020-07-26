@@ -1,0 +1,92 @@
+@keyframes efectos {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  width: 500px;
+  height: 250px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0,.8);
+  border-radius: 0.5em;
+}
+
+#derecha, #izquierda, #btns {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+  
+}
+#derecha, #izquierda {
+  padding: 0.2em;
+  
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#derecha {
+  top: 50%;
+  left: 95%;
+  z-index: 999;
+  transform: translate(-95%,-50%);
+}
+
+#izquierda {
+  top: 50%;
+  left: 5%;
+  z-index: 999;
+  transform: translate(-5%,-50%);
+}
+
+#derecha:hover, #izquierda:hover{
+  background: rgba(0, 0, 0,.9);
+}
+
+img {
+  display: none;
+  
+}
+
+#btns {
+  left: 50%;
+  top: 100%;
+  z-index: 999;
+  transform: translate(-50%,-100%);
+  width: 100%;
+  background-color: rgba(0, 0, 0,.6);
+  text-align: center;
+  transition: all 1.5s;
+}
+
+#btns span {
+  opacity: .6;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+#btns span:hover, #btns .active {
+  opacity: 1;
+}
+
+.efectos {
+  animation-name: efectos;
+  animation-duration: 1s;
+}

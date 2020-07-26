@@ -4,8 +4,12 @@
   "description": "varios proyectos",
   "main": "noFile",
   "scripts": {
+    "Accordion": "npx webpack-dev-server --env.var1=Accordion --env.var2=extra --config webpack.config.js",
+    "AccordionProd": " npx webpack --env.var1=Accordion --env.var2=extra --config webpack.config_prod.js",
     "GridTemplate": "npx webpack-dev-server --env.var1=GridTemplate --env.var2=extra --config webpack.config.js",
-    "GridTemplateProd": " npx webpack --env.var1=GridTemplate --env.var2=extra --config webpack.config_prod.js"
+    "GridTemplateProd": " npx webpack --env.var1=GridTemplate --env.var2=extra --config webpack.config_prod.js",
+    "CarrouselProd": " npx webpack --env.var1=Carrousel --env.var2=extra --config webpack.config_prod.js",
+    "Carrousel": " npx webpack-dev-server --env.var1=Carrousel --env.var2=extra --config webpack.config_prod.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +46,7 @@
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-stats-plugin": "^0.3.2"

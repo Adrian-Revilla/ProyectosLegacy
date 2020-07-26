@@ -9,11 +9,11 @@ module.exports = env => {
     let string = "▲▲▲▲▲▲PROJECT TARGET ::" + env.var1 + ":: PROJECT TARGET▲▲▲▲▲▲";
 
     console.log(RED, string);
-    console.log(RED,'////////////////////////////////////////////////////////')
+    console.log(RED, '////////////////////////////////////////////////////////');
 
     const FOLDER = env.var1;
     const ENTRY = path.resolve(  __dirname, `./src/${FOLDER}/index.ts`);
-    const OUTPUT = path.resolve( __dirname, `./prod/${FOLDER}/`);
+    const OUTPUT = path.resolve( __dirname, `./test/${FOLDER}/`);
     const JSFILENAME = "bundle.js";
     const MODE = "development";
     
@@ -23,7 +23,8 @@ module.exports = env => {
         { test: /\.handlebars$/, loader: "handlebars-loader" },
         { test: /\.css$/i, use: ['style-loader', 'css-loader'] },
         { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
-
+        { test: /\.(jpg|png|jpeg)$/i,loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images'}
+},
     ];
 
     //webpack-dev-server
@@ -33,10 +34,12 @@ module.exports = env => {
     //plugins
     const HTMLWEBPACKPLUGINOPTS = {
         filename: 'index.html',
-        template: 'src/GridTemplate/index.handlebars'
+        template: `src/${FOLDER}/index.handlebars`,
+        inject: false
     };
 
     return {
+        
         entry: { main: ENTRY },        
         output: { path: OUTPUT , filename: JSFILENAME },
         mode: MODE,

@@ -31,13 +31,15 @@ module.exports = env => {
     { test: /\.handlebars$/, loader: "handlebars-loader" },
     { test: /\.css$/i, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
     { test: /\.s[ac]ss$/i, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
+    { test: /\.(jpg|png|jpeg)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images' }}
 
   ];
 
   //plugins
   const HTMLWEBPACKPLUGINOPTS = {
     filename: 'index.html',
-    template: 'src/GridTemplate/index.handlebars'
+    template: `src/${FOLDER}/index.handlebars`,
+    inject: false
   };
 
   return {
@@ -51,7 +53,8 @@ module.exports = env => {
 
     plugins: [
       new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS),
-      new MiniCssExtractPlugin({ filename: 'bundle.css' })
+      new MiniCssExtractPlugin({ filename: 'bundle.css' }),
+      // new BundleAnalyzerPlugin()
     ],
     optimization: {
       minimize: true,
