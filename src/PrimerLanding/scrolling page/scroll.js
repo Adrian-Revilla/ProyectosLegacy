@@ -1,4 +1,4 @@
-var scroller=document.getElementsByClassName("scroller")[0];
+/* var scroller=document.getElementsByClassName("scroller")[0];
 
 
 document.addEventListener("scroll",btnto_top);
@@ -19,4 +19,4 @@ function btnto_top(){
 
 scroller.addEventListener("click",backto_top);
 
-function backto_top(){document.documentElement.scrollTop="0";}
+function backto_top(){document.documentElement.scrollTop="0";} */

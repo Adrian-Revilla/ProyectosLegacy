@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+@import "./scss/solucion_footer.scss";
+@import "./scss/nav.scss";
+@import "./scss/scroller.scss";
+@import "./scss/mainContent.scss";
+@import "./scss/footer.scss";
+
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+}
+
+::selection {
+  background: yellow;
+}
+html{
+  scroll-behavior: smooth;
+}

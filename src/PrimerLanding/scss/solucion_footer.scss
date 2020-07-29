@@ -1,0 +1,31 @@
+/* 
+ES NECESARIO QUE EL CONTENIDO DEL HTML ESTE ORGANIZADO ASI:
+BODY
+  DIV <- CONTENT (una clase content)
+
+    AQUI TODO LO DE LA PAGINA
+
+  /DIV
+  FOOTER 
+
+/BODY
+*/
+
+
+
+html, body{
+  height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  
+    margin: 0;
+    font-family: Lato,sans-serif;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+  }
