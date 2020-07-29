@@ -12,6 +12,8 @@
   @extend %resetUL;
 
   display: flex;
+  position: sticky;
+  top: 0;
 
   li {
     display: block;
@@ -40,9 +42,9 @@
   .menu_content {
     display: flex;
     flex-direction: column;
-
+    background-color: white;
     position: absolute;
-    z-index: 1;
+    z-index: 999;
 
     visibility: hidden;
 
