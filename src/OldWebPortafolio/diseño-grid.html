@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Diseño Grid con Flexbox</title>
+    
+    <link rel="stylesheet" href="css/GRID.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/asides.css">
+    <link rel="stylesheet" href="css/main_footer.css">
+    <link rel="stylesheet" href="css/media_querys.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="emergente()">
+        <div id="modal">
+                <div id="modal_dentro">
+                        <span id="x" onclick="cerrar()">&times;</span>
+                        <p>Este es un diseño realizado con Flexbox y CSS Grid (Es tambien adaptable ó <q><i>Responsive</i> </q>).</p>
+                        <p id="link"><a href="https://github.com/Adrianrx22/GRID-AND-FLEXBOX-WEB-DESIGN.git" target="_blank">VER EL CÓDIGO</a></p> 
+                        <div id="tooltip"><span>En Github <i class="fa fa-github" style="font-size:20px;color:white"></i></span></div>
+                </div>     
+        </div>     
+        
+        <div class="WRAPPER" id="one" >
+                        
+                        
+                <header class="grid_header header_wrapper">
+                        <div class="flex_1">
+                                <div class="imgx">
+                                        <img src="img/example.png" alt="IMG_LOGO"> 
+                                </div>
+                                <div class="h_1">
+                                        <h1>LOGO. Sed nec ornare porttitor felis varius.</h1>
+                                </div> 
+                        </div>
+
+                        <div class="flex_2">
+                                <p><em> ...temporibus quisquam voluptas!</em></p> 
+                        </div> 
+                </header>
+
+                <nav class="grid_nav nav_wrapper">
+                        <div class="nav_drop">
+                                
+                                <a href="#one" class="lorem">LOREM ipsum</a>
+
+                                <a href="#one" class="nav_links_md">Suspendisse laoreet 2</a>
+                                <a href="#one" class="nav_links">mauris et facilisis 3</a>
+                                <a href="#one" class="nav_links">hendrerit, ipsum erat 4</a>
+
+                                
+                                <div id="container_dropdown"><span>quisquam volupta5 </span><img src="img/10.svg" alt="" id="toggle"> 
+                                        <div class="hidden">
+                                                <a href="#one" class="orden_6">sapiente adipisci dolore 6</a>
+                                                <a href="#one" class="orden_7">dolores aapiente 7</a>
+                                                <a href="#one" class="orden_8">aapiente dolores adipisci 8</a>
+                                                <a href="#one" class="a_visibility orden_3">mauris et facilisis 3</a>
+                                                <a href="#one" class="a_visibility orden_4" >hendrerit, ipsum erat 4</a>
+                                                <a href="#one" class="a_visibility_md orden_2">Suspendisse laoreet 2</a>
+                                        </div>
+                                </div>
+                                         
+                        </div>
+                </nav>
+                
+                <aside class="grid_aside aside_wrapper">
+                        <nav>
+                                <h3>INDICE</h3>
+                                <ul class="nav_ul">
+                                        <li><a href="#one">LOREM</a></li>
+                                        <li><a href="#two">Suspendisse laoreet</a></li>
+                                        <li><a href="#three">mauris et facilisis</a></li>
+                                        <li><a href="#four">accumsan mauris,</a></li>
+                                </ul>
+                        </nav>
+                        
+                        <figure class="ads_aside1" id="ads_aside_1fig1">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+
+                        <figure class="ads_aside1" id="ads_aside_1fig2">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+                </aside>
+
+                <main class="grid_main main_wrapper">
+                        <article>
+                                <h2>the lorem ipsum</h2>
+                                <section>
+                                        <h3>Lorem</h3>
+                                        <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus egestas nisi, ut rhoncus nunc 
+                                                ultrices vitae. Sed vehicula ipsum et lacus volutpat eleifend. Maecenas interdum massa velit, 
+                                                in posuere neque tempor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Donec ligula metus, ullamcorper sed odio vel, tempor dignissim velit. Sed ut molestie 
+                                                diam. Maecenas cursus tincidunt turpis in euismod. Pellentesque a ligula et enim faucibus iaculis nec eget felis. 
+                                                Pellentesque fringilla mauris eu imperdiet rutrum. Curabitur at ante dui. Nullam at lacus et velit gravida euismod.
+                                                Phasellus convallis in neque et placerat. Donec tempor, augue quis mollis auctor, ligula lectus pellentesque metus,
+                                                et ornare nisi felis non eros. Donec eleifend ornare finibus. Integer diam orci, sagittis sed tincidunt quis, porta
+                                                at sem. Integer eu lorem ornare, consequat dolor at, elementum metus. Fusce non efficitur arcu, non posuere urna. 
+                                                Ut non dignissim sapien.In ac magna malesuada, consequat nunc et, nterdum
+                                        </p>
+                                                 
+                                        <div class="float_">
+                                                
+                                                
+                                                <p><img src="img/example.png" alt="publicidad" width="150" height="150" id="imagen">
+                                                        lCurabitur nibh orci, luctus eu dapibus ut, egestas vitae massa. Maecenas ornare commodo lacinia.
+                                                        Praesent sed luctus risus. In hac habitasse platea dictumst. Nam commodo quis massa eu pulvinar.
+                                                        Nunc efficitur cursus erat vel iaculis. Etiam quis nisl eu urna pellentesque vestibulum vel in erat. 
+                                                        Aliquam a rhoncus enim. Aenean tempus elit vulputate urna iaculis posuere. Vivamus ut est ligula. Proin aliquet, 
+                                                        nunc ac posuere dignissim, leo quam aliquam nunc, non aliquet sem lorem et erat. In efficitur posuere iaculis. 
+                                                        Curabitur mattis id nunc commodo rutrum. Donec cursus hendrerit ultricies. Sed consectetur, justo eget pellentesque 
+                                                        fermentum, arcu neque porta nunc, id finibus mi magna ac risus. Vivamus scelerisque dui lacus, eu sollicitudin 
+                                                        sapien ultrices et. Vivamus 
+                                                </p> 
+                                                
+                                        </div> 
+                                                        
+                                        <p>
+                                                ibero odio, rutrum ut ipsum eu, tincidunt malesuada ex. Nullam et tempor odio
+                                                Fusce fermentum elit massa. Integer ultricies sed neque eu pulvinar. Mauris sagittis eros justo. 
+                                                Suspendisse tempus mollis pellentesque. Cras fringilla interdum sem, vel lobortis nunc mollis non. 
+                                                Donec a accumsan ex, nec volutpat massa. Aenean posuere et augue ut venenatis. Aenean iaculis ligula nisl, 
+                                                in tristique massa gravida id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                                Integer erat tortor, fermentum vel nisi sit amet, placerat porta arcu. Cras vitae mauris nisi.
+                                                laudantium Maecenas bibendum, urna sit amet cursus ultrices, ex nibh elementum eros, sed volutpat justo ligula ut nulla. Fusce eget luctus turpis. 
+                                                Aliquam mattis dui ac auctor pellentesque.<span  id="two"></span> Nunc sit amet nisi ac lectus consectetur elementum. Nullam accumsan
+                                                sed tortor vitae sollicitudin. Vestibulum eget venenatis quam. Cras placerat sapien 
+                                                lectus, non consectetur ipsum
+                                        </p>
+                                </section>
+
+                                <section>
+                                        <h3><a href="#one" class="to_up" title="click para ir a inicio">&#10162;</a> Suspendisse laoreet</h3>
+                                        <p>
+                                                portPhasellus at felis ut nulla convallis volutpat. Donec a dapibus purus, id pulvinar tellus. Donec laoreet dolor vel 
+                                                ugue euismod, a ornare enim suscipit. Donec cursus mauris ac ex dignissim, vel aliquam neque pharetra. Mauris 
+                                                fringilla sagittis libero, in congue elit dapibus ut. Nam vel turpis et arcu pretium tincidunt in a arcu. 
+                                                Quisque dictum lacus pretium nisi laoreet, auctor ultricies mauris dictum. Proin pretium rutrum ullamcorper.
+                                                Fusce aliquam arcu sed tellus sollicitudin pretium. Fusce ultricies lorem a orci vehicula fringilla.
+                                                Duis efficitur scelerisque enim quis pellentesque. Sed tincidunt gravida urna. Curabitur faucibus tempor
+                                                maximus. Fusce pulvinar augue at ipsum venenatis sollicitudin. Nulla pellentesque mauris eu enim placerat,
+                                                sed suscipit augue  convallis. Proin non neque lorem. Aliquam porttitor justo eu commodo porttitor. 
+                                                Pellentesque habitant morbi  tristique senectus et netus et malesuada fames ac turpis egestas Cras ipsum arcu.
+                                        </p>
+
+                                        <dl>
+                                                <dt>Phasellus</dt>
+                                                <dd>rhoncus justo eros, tristique aliquam nunc consequat ac. Mauris magna elit, tristique ac arcu at, iaculis sollicitudin orci.</dd>
+                                                <dt>Aenean elementum</dt>
+                                                <dd>arcu dui, ut dignissim dui rhoncus ut. Aenean rutrum, dolor a eleifend facilisis, purus libero consequat tellus.</dd>
+                                                <dt>Donec nec sapien</dt>
+                                                <dd>et metus varius convallis. Aliquam nec volutpat est, non finibus tellus. Aenean venenatis, enim vitae lacinia mollis,</dd>
+                                        </dl> 
+                                        <p>
+                                                a vitae consectetur non, gravida quis magna. Etiam at interdum mi. Fusce ut ex a lectus 
+                                                euismod pretium vitae eu sapien. Proin nec ultrices orci. 
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed venenatis justo. 
+                                                Suspendisse convallis eget justo vitae tincidunt. Vestibulum tincidunt, elit nec cursus fermentum, 
+                                                felis libero volutpat ex, a ornare nibh ligula a risus. Vivamus eget pharetra ipsum. Lorem ipsum dolor sit amet, 
+                                                consectetur adipiscing elit. Proin nisi quam, vulputate non porttitor eu, ultricies sed dolor.
+                                                Etiam tincidunt sapien eget felis viverra, ac vestibulum felis venenatis. Nam maximus sapien quis erat bibendum, 
+                                                non sodales dui dolore,
+                                                dignissim. Nunc egestas venenatis ligula, a hendrerit nibh aliquam id.<span id="three"></span> Praesent aliquam imperdiet
+                                                mi nec rhoncus. Donec vitae massa ut purus gravida ultricies ac et ex. Integer feugiat posuere eros, sed fermentum 
+                                                h convallis ut. Aliquam fermentum finibus nunc, vitae elementum ante condimentum ut. Vestibulum nec magna dolor.
+                                        </p>
+                                </section> 
+                                                                             
+                                <section>
+                                        <h3><a href="#one" class="to_up" title="click para ir a inicio">&#10162;</a> Mauris et facilisis</h3>  
+                                        <p>
+                                                Ut quis vulputate dolor. Sed sit amet ex tincidunt, convallis erat a, blandit augue. Donec gravida risus quis leo ultricies tempus. Proin accumsan vulputate sollicitudin. Quisque ac scelerisque turpis, 
+                                                id consequat mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                                                Maecenas interdum metus id est mollis, vel ultricies neque dapibus. Duis eget pharetra lectus, et feugiat dolor. Phasellus rutrum orci sem, in aliquet nulla eleifend id.
+                                                Quisque cursus porta mauris, at luctus sapien bibendum nec. Proin luctus risus eu velit faucibus, nec ornare augue scelerisque. Nunc congue interdum malesuada. Proin placerat nulla at enim auctor, 
+                                                id fringilla nibh malesuada. Vivamus ultrices ipsum libero, ut semper lacus mattis ac. Donec malesuada, massa finibus condimentum ornare, tortor ex consequat orci, sed tristique arcu eros vitae tortor.
+                                                Duis velit nunc, sagittis placerat odio sed, fermentum placerat metus. Aliquam eu justo a quam varius lobortis. Curabitur ex ante, ultricies ut porta finibus, pretium in felis.
+                                                Integer sit amet neque tristique, porta ante id, elementum augue. Praesent et felis nec enim elementum faucibus ut non augue. Phasellus commodo scelerisque rhoncus. Duis turpis tellus,                                                
+                                        </p> 
+
+                                        <blockquote cite="URL_DE_LA_CITA">
+                                               <em>
+                                                elementum venenatis sagittis non, pretium nec enim. Quisque nunc ligula, feugiat ut ullamcorper et, gravida in ligula.
+                                                Nulla ac fringilla nisi. Donec bibendum tortor at nulla elementum dapibus. Morbi tortor nulla, hendrerit eu mi id, 
+                                                faucibus tincidunt tortor. Aenean ut hendrerit lorem. In hac habitasse platea dictumst. Integer quis hendrerit neque. Nam ac tristique mi. 
+                                                Donec sit amet ipsum sodales, suscipit tortor non, vulputate massa. Nulla auctor lectus in risus sollicitudin fringilla. Morbi vel consequat mauris. 
+                                                Pellentesque viverra tincidunt lacus fringilla pharetra. Maecenas sollicitudin faucibus orci at faucibus. Maecenas vitae efficitur mauris, sit amet congue metus. Ut faucibus,
+                                                ipsum nec ornare posuere, nunc arcu ornare est, sed molestie est nunc id neque. Quisque ex mauris, venenatis a varius a, rhoncus et urna. Pellentesque posuere augue in bibendum pharetra.
+                                               </em> 
+                                        </blockquote>
+                                        <p>
+                                                ed et diam eget ipsum convallis tempor id sagittis nulla. Aliquam tempor pretium mattis. Aenean sit amet rutrum nisl. Quisque volutpat imperdiet ultrices. 
+                                                Aenean molestie pulvinar lacus, et faucibus magna aliquet ut. Cras maximus nibh odio, in congue ipsum suscipit eget.
+                                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                                Etiam et magna ut nisi vulputate ullamcorper.  Maecenas tempor ante metus.
+                                                Phasellus porta, mi eu accumsan laoreet, massa felis pharetra ante, ut ornare erat odio in elit. Phasellus at dui eu nisi porttitor dapibus.
+                                        </p>
+
+                                        <p>
+                                                Aliquam sit amet sem pharetra, pharetra metus sit amet, ullamcorper ante. Pellentesque sodales eros in ex convallis condimentum. Fusce in imperdiet tortor, 
+                                                at facilisis nisi. Nulla rutrum nisl  dolore,
+                                                sit amet est laoreet laoreet. Morbi sagittis laoreet mi et feugiat. Praesent rhoncus quis risus vitae cursus. 
+                                                <span id="four"></span>Phasellus tempus accumsan lectus id imperdiet. Duis consequat,felis ac mattis convallis, nulla massa suscipit nunc, 
+                                                 id eleifend mauris arcu at magna. Phasellus odio libero,  suscipit quis ex ut, suscipit posuere tellus. Pellentesque
+                                                 
+                                        </p>
+                                </section>
+
+                                <section>
+                                        <h3><a href="#one" class="to_up" title="click para ir a inicio">&#10162;</a> Accumsan mauris</h3>
+                                        <p>
+                                                Quisque gravida odio in nulla consequat malesuada. Sed a magna dui. Ut vestibulum rutrum viverra. Donec suscipit ante ipsum, nec luctus ligula venenatis id. 
+                                                Maecenas  <strong>faucibus ultrices nisi ut tempor. Mauris dui tellus, dapibus eget sem non, facilisis posuere nisi.</strong> Nunc euismod est a ante tincidunt, id ullamcorper nunc tristique
+                                                orci justo, accumsan porttitor mollis sit amet, condimentum quis turpis. Aliquam a felis sit amet neque pharetra pulvinar vel nec ante. Donec pretium pellentesque mi, 
+                                                nec finibus massa feugiat vitae.
+                                                nteger vulputate tellus nec mauris blandit pulvinar. Mauris vitae risus lorem.     
+                                        </p>
+
+                                        <p>
+                                                Nam pellentesque consectetur eleifend. Praesent velit lacus, dapibus eget magna vitae, 
+                                                dignissim aliquet est. Mauris nec <mark>commodo sapien,</mark> 
+                                                sed dictum purus. Donec ante purus, gravida eget turpis eget, ullamcorper euismod purus. Mauris et lacus erat. Praesent molestie interdum lorem nec imperdiet.
+                                                In congue in ligula vel commodo. Nulla facilisi. Etiam dictum orci vel lacus porta, vitae luctus tellus 
+                                        </p>
+
+                                        <p>
+                                                Vivamus elementum elit quis diam condimentum, a viverra ante laoreet. Integer elementum nisl ut mattis lacinia. Duis quam nibh, tempus rutrum dapibus quis, tristique ut odio. Cras eu dapibus nisl. Vestibulum convallis, 
+                                                lacus vitae varius varius, libero mi cursus diam, sit amet pellentesque velit nisi ut massa. Nunc vitae diam posuere, rhoncus metus a, commodo augue. Vestibulum tincidunt eu lectus in commodo. Vestibulum nec egestas massa. 
+                                                Nullam eget tempor libero. Aenean varius sagittis dolor ut tincidunt. Aenean et lorem lacinia ligula aliquam aliquet. Donec sed ante consectetur, 
+                                                porta augue eget, ullamcorper nunc. Mauris nec volutpat ipsum, et dignissim felis. Proin ullamcorper blandit neque vel dapibus.
+                                        </p>
+
+                                        <p>
+                                                Maecenas non quam libero. In sit amet imperdiet leo. Vestibulum venenatis, dui a accumsan placerat, lectus diam convallis lorem, 
+                                                ut bibendum urna lacus nec orci. Mauris lacus dolor, auctor et tincidunt a, vehicula in risus. Nunc in quam semper, dignissim lacus vitae, hendrerit lacus. 
+                                                Nulla eleifend massa odio, nec laoreet nisl dignissim vel. Nulla posuere tincidunt tortor et semper.
+                                                Fusce lectus felis, rhoncus in sollicitudin a, egestas non metus. <samp>Vivamus lacinia diam</samp>ac vestibulum sollicitudin. 
+                                        </p>
+
+                                        <p>
+                                                Etiam congue pharetra diam, sed porta ligula bibendum at. Curabitur id mauris sed ipsum mattis consectetur in quis magna. Quisque accumsan risus at euismod hendrerit. 
+                                                Pellentesque at urna non ipsum bibendum accumsan id in libero. Cras a mauris eros. 
+                                                In vitae sem nulla. Phasellus dui justo, <ins>cursus quis pulvinar ut,</ins>  lacinia id enim. Etiam ultricies purus sit amet magna commodo scelerisque. 
+                                                In eget congue erat. Morbi hendrerit non nunc at aliquam. Suspendisse a consectetur ipsum, facilisis ullamcorper sem. Pellentesque luctus dolor ut massa lobortis, in placerat dui consectetur. 
+                                                Nunc tellus felis, ultrices in pellentesque sed, posuere vel dolor. Cras commodo sapien ac arcu tincidunt, eget elementum libero tincidunt.
+                                        </p>
+
+                                        <p>
+                                                Cras vehicula metus vel <s>odio semper tristique.</s>  Vivamus laoreet, metus id finibus sodales, purus felis molestie neque, rutrum mattis augue nibh id magna. 
+                                                Nunc dictum orci sit amet risus posuere, sed venenatis ante dapibus. 
+                                        </p>
+
+                                        <p>
+                                                Donec dictum mauris vitae erat dapibus, nec dignissim massa hendrerit. Fusce bibendum finibus ligula eu semper. Sed eu elit scelerisque, 
+                                                dignissim leo non, consectetur nibh. Suspendisse odio lorem, pretium a tristique ac, 
+                                                interdum in magna. Integer fringilla neque tincidunt finibus condimentum. Cras feugiat ex vitae urna pulvinar, non ultrices neque malesuada...
+                                        </p>
+
+                                        <details>
+                                                <summary>Click</summary>
+                                                <p>
+                                                Donec turpis nibh, imperdiet imperdiet justo id, egestas vestibulum nulla. Duis ullamcorper ultrices eleifend. Integer viverra rhoncus mi at dapibus. Nunc porta eget tortor eget tempor. 
+                                                Suspendisse scelerisque, tortor at aliquet tincidunt, sapien nisi tincidunt diam, sodales faucibus mauris purus non turpis. Fusce vel mi eget mauris vehicula vestibulum eget ut nunc.
+                                                Etiam ac neque ante. Quisque venenatis vel sapien facilisis consectetur. Donec eu lobortis justo.
+                                                </p>
+                                        </details>
+                                </section>
+                        </article>
+                </main>
+
+                <aside class="grid_aside_2 aside_wrapper "> 
+                        <div>
+
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=Biograf%C3%ADa&width=291&height=260&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                                        width="291" height="260" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                <!-- iframe 
+                                        src="https://calendar.google.com/calendar/embed?height=250&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FCaracas&amp;showNav=0&amp;showCalendars=0&amp;showTz=0&amp;showTitle=1&amp;showDate=1&amp;showPrint=0&amp;title=CALENDARIO&amp;showTabs=0"
+                                        style="border-width:0" width="275" 
+                                        height="244">
+                                </iframe>   AHI DONDE VA BORDER VA UN STYLE -->
+                        </div>
+
+                        <figure id="ads_aside_2fig1">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+
+                        <figure id="ads_aside_2fig2">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+                </aside>
+
+                <aside class="grid_aside_3">
+                        <div>
+                                <a class="twitter-timeline" href="https://twitter.com/Twitter?ref_src=twsrc%5Etfw"   data-tweet-limit="3">Tweets by Twitter</a>  
+                                <script async src="https://platform.twitter.com/widgets.js"></script>
+                        </div>    
+                </aside>
+
+                <aside class="grid_aside_4  ads"> 
+                        
+                        <figure id="ads_aside3">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+                        
+                        <figure id="ads_aside4">
+                                <img src="img/example.png" alt="publicidad">
+                                <figcaption>A D S</figcaption>
+                        </figure>
+                </aside>
+
+                <footer class="grid_footer footer_wrapper"><h3>F O O T E R</h3></footer>
+        
+        </div>
+        
+
+        <script src="js/modal.js"></script>
+</body>
+</html>

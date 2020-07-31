@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height:80vh;
+}
+#grid{
+    max-width: 1200px;
+    width: 80%;
+    
+    min-height: 30vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "sec1 sec2 sec3" 
+    "sec4 sec4 sec4";
+
+}
+
+
+#sec_1,#sec_2,#sec_3{
+    justify-self: center;
+    align-self: center;
+}
+
+#sec_4{
+    grid-area: sec4;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}

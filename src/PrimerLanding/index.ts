@@ -1,7 +1,7 @@
 require('./index.scss');
 require('./img/ejemplo.png');
 
-
+//TODO: MEJORAR FUERTEMENTE EL CSS.
 let ArrowToUP = document.querySelector(".scroller") as HTMLDivElement;
 let deslizamiento: number;
 

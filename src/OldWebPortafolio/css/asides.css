@@ -1,0 +1,58 @@
+/*______________________________________ASIDE 1 Y ASIDE 2________________________________________________*/
+.WRAPPER .aside_wrapper {
+align-items:center;
+display:flex;
+flex-direction:column;
+justify-content:space-between
+}
+.WRAPPER .aside_wrapper nav h3 {
+font-family:'Lato', sans-serif;
+margin-top:0;
+text-align:center;
+}
+.WRAPPER .aside_wrapper nav .nav_ul {
+box-shadow:0 0 3px #1d1b1d;
+list-style-type:none;
+margin:0;
+padding:0;
+position:relative;
+z-index:1;
+}
+.WRAPPER .aside_wrapper nav .nav_ul li a {
+color:#000;
+display:block;
+font-family:'Lato',sans-serif;
+font-size: 17px;
+padding:1em;
+text-decoration:none;
+transition: color 250ms, transform 250ms, opacity 250ms
+}
+.WRAPPER .aside_wrapper nav .nav_ul li a::before {
+color:#8A2BE2;
+content:"\21E8";
+position:absolute;
+left:-10px;
+opacity:0;
+transition:all 200ms
+}
+.WRAPPER .aside_wrapper nav .nav_ul li a:hover {color:#8A2BE2; transform:translateX(15px)}
+.WRAPPER .aside_wrapper nav .nav_ul li a:hover::before {opacity:1}
+/*______________________________________ASIDE 3________________________________________________*/
+
+/*...aqui va el widget de twitter..*/
+
+
+/*______________________________________ASIDE 4________________________________________________*/
+.WRAPPER .ads {
+align-items:center;
+display:flex;
+flex-flow:column;
+font-family:Lato,sans-serif;
+font-weight:bolder;
+justify-content:space-around;
+font-size: 17px;
+}
+/*_____________________________________IMAGENES________________________________________________*/
+.WRAPPER aside figure{font-family:Lato,sans-serif;font-weight:bolder;text-align:center}
+.WRAPPER aside figure img{height:auto; width:120px}
+

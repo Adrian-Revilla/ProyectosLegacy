@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="bundle.css">
+    <title>¡Bienvenido!</title>
+</head>
+<body class="bg-primary" style="position: relative;" id="body">
+        <main class="grid-container">
+                <header class="header bg-primary text-white rounded font-weight-bolder"><h1>Sistema de testing</h1></header>
+                <section class="login shadow bg-light rounded text-dark border-bottom  border-dark">
+                    <form id="formdata" autocomplete="off" enctype="multipart/form-data">
+                        <div class="form-group">
+                                <label for="user_label" class="font-weight-bold">Usuario</label>
+                                <input type="text"  name="user" id="user_label" class="form-control" maxlength="40" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="pass_label" class="font-weight-bold">Contraseña</label>
+                                <input type="password" name="pass" id="pass_label" class="form-control" maxlength="40" required>
+                        </div> 
+                        <div class="custom-control custom-checkbox" style="user-select: none">
+                                <input type="checkbox" name="sesion_activa" id="sesion_activa" class="custom-control-input">
+                            <label for="sesion_activa" class="label_keep custom-control-label" >Mantener sesión <strong><u>activa</u></strong></label>
+                            
+                        </div>
+                        <input type="submit" value="Ingresar" class="btn btn-dark" >
+                    </form>
+                </section>
+                <section class="stats border-bottom  border-dark rounded shadow  text-dark bg-light ">
+                    <p><i class="icon-drivers-license-o" style="font-size: 40px"></i> <span class="h2" id="stat-1"> 1</span></p>
+                    <p>Cuentas registradas</p>
+                    <p> <i class="icon-keyboard-o" style="font-size: 40px"></i> <span class="h2" id="stat-2"> 2</span> </p>
+                    <p>ingresos al sistema</p>
+                    <p><i class="icon-database" style="font-size:40px"></i> <span class="h2" id="stat-3"> 3</span> </p>
+                    <p>datos contabilizados en total</p>
+                </section>
+            </main> 
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
+    
+    
+
+

@@ -1,0 +1,32 @@
+body{
+    box-sizing: border-box;
+}
+.grid-container{
+    
+    display: grid;
+    grid-template-rows: 0.3fr auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header header"
+    "login  stats "
+    "login  stats ";
+   
+    max-width: 1200px;
+    width: 80%;
+    margin: 1em auto;
+    max-height: 100vh;
+    min-height: 400px;
+
+}
+
+.grid-container .header{
+    grid-area: header;
+    user-select: none;
+}
+.grid-container .login {
+    grid-area: login;
+}
+.grid-container .stats{
+    grid-area: stats;
+}

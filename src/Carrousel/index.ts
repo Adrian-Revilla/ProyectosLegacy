@@ -4,6 +4,7 @@ require('./images/2.png');
 require('./images/3.png');
 
 "use strict";
+//TODO: HACER DE ZERO EL CODIGO DEL CARRUSEL Y MEJORAR CSS. ES DECIR HACER TODO.
 
 
 
@@ -18,7 +19,8 @@ let fotos = document.getElementsByTagName("img") as HTMLCollectionOf<HTMLImageEl
 
 
 btn_seleccion = 0;
-fotos[btn_seleccion].style.display="block"; //Habilitar la primera imagen por defecto
+fotos[btn_seleccion].style.display = "block"; //Habilitar la primera imagen por defecto
+
 
 main.addEventListener("click", (e: Event) => {
     const Selection = e.target as HTMLElement;
