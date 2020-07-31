@@ -1,0 +1,162 @@
+
+	body{
+		
+		background: #F6F4F3;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#root{
+			margin:0 auto;
+			max-width: 2000px;
+			color: #4E4D4D;		
+			padding: 0;
+			width: 100%;
+			position: relative;
+	}
+
+	a
+	{
+		color: #383838;
+	}
+	
+	#header
+	{
+		background: #3f3f3f;
+	}
+	
+	#copyright {
+		p{
+			letter-spacing: 0.20em;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			color: #6F6F6F;
+
+		}	
+		a{
+			text-decoration: none;
+			color: #8C8C8C;
+		}
+		
+	}
+	#portfolio-wrapper
+	{
+		padding: 6em 0em 3em 0em;
+	}
+
+
+
+	#page
+	{
+		padding: 4em 0em;
+		border-top: 1px ridge #E5E5E5;
+	}
+
+
+
+	#portfolio-wrapper
+	{
+		padding: 6em 0em;
+	}
+	
+	#portfolio
+	{
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	#portfolio img
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+
+
+	.columnas{
+		flex-basis: 20%;
+		padding-bottom: 1em;
+		
+	}
+	.columnas img{
+		width: 250px !important;
+	}
+	.columnas .box{
+		width: 250px !important;
+	}
+	.columnas .button{
+		width: 100%;
+		overflow: scroll;
+	}
+	.columnas_page{
+		flex-basis: 45%;
+		padding-bottom: 1em;
+	}
+	#contact{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.column img, .columnas img{
+		display: block;
+		width: 100%;
+		
+	}
+	.ul_css{
+		display: flex !important;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 100%;
+	
+	}
+	.li_css{
+		display: block;		
+		font-size: 2.5em;
+	}
+
+	// .WsIcon{
+	// 	position: fixed;
+		
+	// 	background-color: red;
+	// 	display: block;
+	// 	bottom: 0;
+	// 	right: 10px;
+	// 	z-index:9999;
+	// 	// transform:translate(-99.5%,-98%);
+	// 	a{
+	// 		font-size: 3.2em;
+	// 		margin: 0;
+
+	// 		padding: 0;
+	// 		background-color: blue;
+	// 		&:hover{
+	// 			// font-size: 3.5em;
+	// 		}
+	// 	}
+		.WsIcon{
+			position: fixed;
+			margin: 0;
+			padding: 0;
+			
+			display: block;
+			bottom: 0;
+			right: 10px;
+			z-index:9999;
+			// transform:translate(-99.5%,-98%);
+			
+				font-size: 3em;
+	
+				&:hover{
+					font-size: 3.5em;
+				}
+			i{
+				padding: 0;
+				margin: 0;
+			}
+			
+		
+
+	}
+	
