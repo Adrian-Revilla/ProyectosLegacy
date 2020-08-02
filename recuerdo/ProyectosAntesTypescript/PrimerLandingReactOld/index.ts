@@ -4,5 +4,5 @@
 
 // import './entry.js';
 
-import './entry.tsx';
+import './indexo.tsx';
 

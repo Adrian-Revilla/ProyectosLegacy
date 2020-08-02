@@ -1,9 +1,9 @@
 // import './index.html'
-/* import React from 'react';
+import React from 'react';
 import ReactDom from 'react-dom'
-import Main from './modules/Main.jsx'
+import Main from './componentes/Main.jsx'
 ReactDom.render(<Main/>,document.getElementById('root'))
- */
+
 /* import './template_css/scss/default.scss'
 
 
