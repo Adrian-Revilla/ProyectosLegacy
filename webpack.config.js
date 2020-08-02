@@ -58,15 +58,6 @@ module.exports = env => {
 }
 
 /* {
-    test: /\.(jpg|png|jpeg)$/i,
-    loader: 'file-loader',
-    options: {
-        name: '[name].[ext]',
-        outputPath: 'images'
-    }
-
-}, */
-/* {
     test: /\.(ico)$/i,
     loader: 'file-loader',
     options: {

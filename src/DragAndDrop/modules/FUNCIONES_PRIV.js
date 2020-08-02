@@ -1,4 +1,4 @@
-import { vars } from "./vars.js";
+/* import { vars } from "./vars.js";
 import $ from 'jquery';
 
 import {btn_submit} from './AGREGAR_TAB_FUNC.js';
@@ -164,3 +164,4 @@ function error_submit(msg){
 }
 
 
+ */

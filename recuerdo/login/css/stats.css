@@ -1,0 +1,15 @@
+.grid-container .login form, .grid-container .stats{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 100%;
+    
+    
+}
+.grid-container .stats{
+    justify-content: space-around;
+   
+    text-align: center;
+}
+

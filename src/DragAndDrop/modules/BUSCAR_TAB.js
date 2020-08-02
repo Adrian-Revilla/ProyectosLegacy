@@ -1,4 +1,4 @@
-import {vars} from './vars.js'
+/* import {vars} from './vars.js'
 import {fetch_search,limpiar,buscar,reiniciar_searchbox} from './BUSCAR_TAB_FUNC.js'
 
 vars.buscar.addEventListener('click',()=>{
@@ -30,4 +30,4 @@ vars.options.addEventListener('click',(e)=>{
   
   vars.input.addEventListener('input',(e)=>{
     buscar(e.target.value);
-  });
+  }); */

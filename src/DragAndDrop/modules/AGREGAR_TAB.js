@@ -1,4 +1,4 @@
-import {vars} from './vars.js';
+/* import {vars} from './vars.js';
 import {avatar,nombreYapellidos,edad_nacimiento_sexo,biografia,btn_submit} from './AGREGAR_TAB_FUNC.js';
 
 
@@ -57,4 +57,4 @@ vars.dragend.addEventListener('drop',(e)=>{
     //añade el boton al dragend si HAY ELEMENTOS AÑADIDOS EN EL FIELDSET_FINAL
     fieldset_final !== undefined ? vars.dragend.appendChild(fieldset_final) && btn_submit(true): btn_submit(false);
 
-});
+}); */

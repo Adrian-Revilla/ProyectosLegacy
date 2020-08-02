@@ -1,4 +1,4 @@
-import {vars} from './vars.js';
+/* import {vars} from './vars.js';
 
 export function limpiar(){
     if(vars.busqueda_.childElementCount>1){
@@ -83,4 +83,4 @@ function generar_html(array){
            
    }
    
-   
+    */
