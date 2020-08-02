@@ -23,8 +23,10 @@ module.exports = env => {
         { test: /\.handlebars$/, loader: "handlebars-loader" },
         { test: /\.css$/i, use: ['style-loader', 'css-loader'] },
         { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
-        { test: /\.(jpg|png|jpeg)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images' } }
-                
+        { test: /\.(jpg|png|jpeg)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images' } },
+        { test: /\.(ico)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images'  }
+
+},
     ];
 
     //webpack-dev-server

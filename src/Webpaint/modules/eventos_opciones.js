@@ -16,7 +16,7 @@ export const pincel_blue= azul.c.addEventListener("click",function(){
  
 //ACTIVA EL BORRADOR
 export const borrador= cleaners.clean_by_parts.addEventListener("click",function(){  
-    canvas_div.style.cursor='url("../img/eraser.png"), auto';
+    canvas_div.style.cursor='url("./images/eraser.png"), auto';
     boolean.is_eraser_activated=true;
 });
 

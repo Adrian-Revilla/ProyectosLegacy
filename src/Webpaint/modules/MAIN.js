@@ -4,14 +4,10 @@ import {mousedown,mousemove,mouseup,mouseout} from "./eventos_canvas.js";
 import {draw,erase} from "./funciones.js";
 import {pincel_red,pincel_green,pincel_blue,borrador,pantalla} from "./eventos_opciones.js";
 
-import "../img/pincel.ico";
-import "../img/eraser.png";
-import "../img/pic.png";
-import "../css/body_header.css";
-import "../css/div_canvas.css";
-import "../css/div_opciones.css";
-import "../css/botones.css";
-import "../css/media_querys.css";
+
+
+
+
 
 
 //EN CASO DE QUE LA PANTALLA SEA MUY PEQUEÑA. ADAPTA EL CANVAS.

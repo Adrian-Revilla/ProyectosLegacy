@@ -4,7 +4,7 @@ export class color{
         this.c=c;
     }
     cambiar_color(){
-        canvas_div.style.cursor='url("../img/pincel.ico"),auto'; //'url("img/pincel.ico"), auto'
+        canvas_div.style.cursor='url("./images/pincel.ico"),auto'; //'url("img/pincel.ico"), auto'
         boolean.is_eraser_activated=false;
         return this.c.id;
     }
@@ -12,3 +12,6 @@ export class color{
 export var rojo= new color(document.getElementById("red"));
 export var verde= new color(document.getElementById("green"));
 export var azul= new color(document.getElementById("blue"));
+
+
+
