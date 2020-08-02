@@ -1,0 +1,23 @@
+
+
+
+.hover_x{
+  opacity: .6;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  transition: 500ms opacity;
+  font-size: 26px;
+}
+
+.hover_x:hover{
+  opacity: 1;
+}
+
+.fixed{
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
