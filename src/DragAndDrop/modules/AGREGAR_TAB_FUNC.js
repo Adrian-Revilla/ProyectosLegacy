@@ -1,4 +1,4 @@
-/* import {vars} from './vars.js';
+import {vars} from './vars.js';
 import {generar_body_comun,generar_elementos_comunes,checkdata,procesarImagen} from './FUNCIONES_PRIV.js'
 
 export function avatar(){
@@ -324,4 +324,3 @@ export function btn_submit(boolean){
     
     
 }
- */

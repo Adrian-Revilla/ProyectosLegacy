@@ -1,5 +1,4 @@
-/* import { vars } from "./vars.js";
-import $ from 'jquery';
+import { vars } from "./vars.js";
 
 import {btn_submit} from './AGREGAR_TAB_FUNC.js';
 //--------------------- FUNCIONES PRIVADAS ----------------
@@ -154,14 +153,23 @@ function error_submit(msg){
     document.body.insertBefore(alert,document.getElementById('home_header'));
     
     setTimeout(() => {
-       $(".section-x").fadeOut("fast",function(){
-            $(".section-x").addClass('hidden');
-            document.getElementById('btn-send').removeAttribute('disabled')
-       });
+    
+        document.getElementById('btn-send').removeAttribute('disabled')
+
     
     }, 3000);    
+
+
+    
    
 }
 
+/* 
+$(".section-x").fadeOut("fast",function(){
+            $(".section-x").addClass('hidden');
+            document.getElementById('btn-send').removeAttribute('disabled')
+       });
 
- */
+*/
+
+

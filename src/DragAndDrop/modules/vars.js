@@ -1,4 +1,4 @@
-/* export const vars={
+export const vars={
     dragstart:document.getElementById('ul'),
     dragend:document.getElementById('form'),
     ul_ids:[],
@@ -17,4 +17,3 @@ for(i=0;i<vars.dragstart.childElementCount;i++){vars.ul_ids.push(vars.dragstart.
 
 
 
- */

@@ -23,8 +23,8 @@ module.exports = env => {
         { test: /\.handlebars$/, loader: "handlebars-loader" },
         { test: /\.css$/i, use: ['style-loader', 'css-loader'] },
         { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
-        { test: /\.(jpg|png|jpeg)$/i,loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images'}
-},
+        { test: /\.(jpg|png|jpeg)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images' } }
+                
     ];
 
     //webpack-dev-server
@@ -43,7 +43,7 @@ module.exports = env => {
         entry: { main: ENTRY },        
         output: { path: OUTPUT , filename: JSFILENAME },
         mode: MODE,
-
+        devtool:'source-map',
         module: { rules: WEBPACKMODULERULES },
 
         resolve: { extensions: ['.tsx', '.ts', '.js'] },
@@ -52,7 +52,13 @@ module.exports = env => {
             new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS)
         ],
         
-        devServer: { contentBase: DEV_SERVER_PATH, port: PORT, open: true, stats:'minimal',host:'0.0.0.0' }
+        devServer: { contentBase: DEV_SERVER_PATH, port: PORT, open: true, stats: 'minimal', host: '0.0.0.0' },
+        externals : {
+            "react": "React",
+            "react-dom": "ReactDOM"
+        } 
+        
+       
     }
 
 }
@@ -72,4 +78,28 @@ module.exports = env => {
                 name: '[name].[ext]',
                 outputPath:'fonts'
               }
-            } */
+            } 
+        //EL KEY ES EL NOMBRE DEL IMPORT Y EL VALUE ES COMO SE USA LA VARIABLE EXPORTADA
+            
+             externals : {
+            react: 'React',
+            'react-dom': 'ReactDOM'
+        } 
+            
+            
+            
+            {
+            test: /\.jsx$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env','@babel/preset-react'],
+                plugins: ['@babel/plugin-proposal-class-properties',{loose:true}]
+              }
+            }
+          }
+            
+            
+            
+            */
