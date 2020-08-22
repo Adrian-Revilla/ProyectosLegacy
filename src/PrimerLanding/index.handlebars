@@ -12,14 +12,26 @@
 
     {{> partials/nav}}
     
-    <h1>heading</h1>
+    <h1>Index</h1>
     
-    {{> partials/blockquote}}
+    <section class="css-selector" style="margin-bottom: 5em;">
       
-    {{> partials/parrafos}}
-   </div> 
+    {{> partials/blockquote}}
 
-    {{> partials/footer}}
+    </section>
+
+
+    <section style="background-color: white; padding:1em; position:relative;" class="main">
+      <div class="title">
+        <h3>Main</h3>
+      </div>
+    {{> partials/parrafos}}
+    </section>  
+   </div> 
+  <section class="css-selector">
+  {{> partials/footer}}
+  </section>
+  
 
     <div class="scroller"><span>&#x21ea;</span></div>
 

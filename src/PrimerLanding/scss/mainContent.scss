@@ -1,20 +1,70 @@
-h1{
-  text-align: center;
-/*   text-shadow: 10px 15px rgba(82, 24, 24, 0.109);
- */  text-transform: uppercase;
- text-shadow: 1px 1px 1px black;
+@keyframes main {
+  0%{background-position:9% 0%}
+  50%{background-position:92% 100%}
+  100%{background-position:9% 0%}
+}
+.css-selector {
+  background: linear-gradient(139deg, #21a8c8, #07596c);
+  background-size: 400% 400%;
 
+  -webkit-animation: main 16s ease infinite;
+  -moz-animation: main 16s ease infinite;
+  animation: main 16s ease infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+h1{
+ font-family: 'Open Sans',sans-serif;
+ color: white;text-align: center;
   }
-  
+
+
+
 .flex{
   display: flex;
-  flex-direction: row-reverse;
-  border: 1px solid red;
+
+  width: 75%;
+  min-width: 800px;
+  padding: 1em;
+  margin: 0 auto;
+  border-radius: 1em;
+  color: white;
   
+  .quote{
+    
+    align-self: center;
+    font-style: italic;
+    font-weight: bold;
+  }
   .imagen{
     display: block;
+    background-color: transparent;
+
+    height: auto;
     padding: 0;
     margin: 0;
+    
+    
+    img{
+      max-width: 100%;
+      border-radius: 1em;
+      height: 100%;
+      transform: rotate(0deg);
+      transition: all 500ms;
+    }
+    &:hover img{
+      transform: rotate(360deg);
+    }
+
   }
   
 }
