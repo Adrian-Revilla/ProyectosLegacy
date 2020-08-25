@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="zxx">
-  <head>
-    <meta charset="utf-8">
-    <title>Landing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
-    <link {{!-- rel="stylesheet" --}}  href="bundle.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-   <div class="content">
+{{!-- class="h-100" --}}
+<html lang="zxx" >
 
-    {{> partials/nav}}
-    
-    <h1>Index</h1>
-    
-    <section class="css-selector" style="margin-bottom: 5em;">
-      
-    {{> partials/blockquote}}
+<head>
+  <meta charset="utf-8">
+  <title>Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>  
+  <link {{!-- rel="stylesheet" --}} href="bundle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-    </section>
+<body class="d-flex flex-column min-vh-100">
 
+  {{!-- NAVEGACION --}}
+  {{> partials/nav}}
 
-    <section style="background-color: white; padding:1em; position:relative;" class="main">
-      <div class="title">
-        <h3>Main</h3>
-      </div>
-    {{> partials/parrafos}}
-    </section>  
-   </div> 
-  <section class="css-selector">
+  {{> partials/intro}}
+  <hr />
+  {{> partials/main}} 
+
+  <hr />
+
   {{> partials/footer}}
-  </section>
+
+
+  <div class="scroller"><span>&#x21ea;</span></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="bundle.js"></script>
   
+</body>
 
-    <div class="scroller"><span>&#x21ea;</span></div>
-
-    
-    <script src="bundle.js"></script>
-  </body>
 </html>

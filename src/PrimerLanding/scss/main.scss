@@ -1,0 +1,22 @@
+.options{
+  display: flex;
+  list-style-type: none;
+  list-style-position: outside;
+  border-radius: 0.2em;
+  justify-items: stretch;
+  border: 1px solid red;
+
+  width: 80%;
+  margin: 1em auto 1em auto; 
+}
+.mainn{
+  
+ width: 90%;
+ margin: 1em auto 1em auto ;
+ 
+ padding: 1em;
+ 
+ p{
+   font-weight:bold;
+ }
+}

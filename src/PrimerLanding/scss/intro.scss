@@ -1,0 +1,39 @@
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+
+  .flexitem{
+
+    flex:0 1 500px;
+    margin: 5px;
+  }
+  .quote{
+    font-style: italic;
+    font-weight: bold;  
+  }
+  .imagen{
+    display: block;
+
+    
+    img{
+      display: block;
+      margin: 0 auto;
+      max-width: 200px;
+      width: 100%;
+      border-radius: 0.5em;
+      height: auto;
+      transform: rotate(0deg);
+      transition: all 100ms;
+      &:hover{
+        transform: rotate(5deg);
+      }  
+    }
+    
+
+  }
+  
+}

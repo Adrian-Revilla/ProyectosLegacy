@@ -1,19 +1,15 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
-@import "./scss/solucion_footer.scss";
+@import './scss/body.scss';
 @import "./scss/nav.scss";
+@import "./scss/main.scss";
+@import "./scss/intro.scss";
 @import "./scss/scroller.scss";
-@import "./scss/mainContent.scss";
-@import "./scss/footer.scss";
-@import "./scss/section.scss";
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #21a8c8;
-  
-}
+// @import "./scss/footer.scss";
+// @import "./scss/section.scss";
+// @import "./scss/solucion_footer.scss";
 
 
-html{
-  scroll-behavior: smooth;
-}
+
+
+

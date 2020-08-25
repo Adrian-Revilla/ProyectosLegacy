@@ -5,66 +5,104 @@
   margin: 0;
 }
 
-.lista {
+%estilos_nav {
   width: 100%;
-  background-color: #0e4685;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
-  @extend %resetUL;
+  background-color: #1aabd5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.575);
 
-  display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 999;
   li {
     display: block;
     cursor: pointer;
-
     &:hover {
-      background-color: rgba(255, 255, 255,0.2);
-    }
+      background-color: rgba(255, 255, 255, 0.2);
 
+    }
     a {
       display: block;
       color: white;
       text-decoration: none;
       padding: 1em;
+      text-align: center;
+    }
+  }
 
-      &:focus {
-        background-color: rgb(14, 102, 184);
+  #github {
+    margin: 0 auto;
+  }
+}
+
+.lista {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @extend %resetUL;
+  @extend %estilos_nav
+;
+
+
+  .menu {
+    .menu_content {
+      @extend %resetUL;
+
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 0;
+      position: relative;
+      z-index: 999;
+      transition: height 500ms;
+      min-width: 100%;
+
+      background-color: white;
+
+      a {
+        color: #130202;
+
+        &:hover,
+        &:focus {
+          background-color: #13b5f7;
+          color: white;
+        }
       }
     }
   }
 }
 
-.lista .menu {
-  
 
-  .menu_content {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
+@media screen and (min-width: 576px) {
+  
+  .lista {
+    flex-direction: row;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
     z-index: 999;
 
-    visibility: hidden;
+    .menu {
+      .menu_content {
+        display: flex;
+        flex-direction: column;
+        min-width: auto;
+        height: auto;
+        position: absolute;
+        visibility: hidden;
+        z-index: 999;
 
-    @extend %resetUL;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: none;
+      }
 
-    box-shadow: 0px 0px 16px  rgba(0, 0, 0, 0.5);
-
-    a {
-      color: black;
-
-      &:hover,
-      &:focus {
-        background-color: #13b5f7;
-        color: white;
+      &:hover .menu_content,
+      &:active .menu_content,
+      &:focus-within .menu_content {
+        visibility: visible;
       }
     }
-  }
 
-  &:hover .menu_content,
-  &:focus-within .menu_content {
-    visibility: visible;
+    #github {
+      margin: 0 0 0 auto;
+    }
   }
 }
