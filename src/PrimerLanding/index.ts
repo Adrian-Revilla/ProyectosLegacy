@@ -1,48 +1,41 @@
-require('./index.scss');
+import * as $ from 'jquery';
+// esto funciona pero son demasiados iconos
+// require('@fortawesome/fontawesome-free/js/all');
 
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import {faHome,faCheck, faGlobe,faComments,faUserCircle,faCheckDouble,faSortUp,faSortAmountUp } from '@fortawesome/free-solid-svg-icons';
+import {faPaperPlane,faCommentAlt } from '@fortawesome/free-regular-svg-icons';
+import {faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+
+
+library.add(faHome, faCheck, faCommentAlt, faComments,
+  faUserCircle, faPaperPlane, faGlobe, faPaperPlane,
+  faGithubSquare,faCheckDouble,faSortUp,faSortAmountUp
+  
+);
+dom.watch();
+
+
+
+
+
+
+
+
+    
+
+require('bootstrap/js/dist/util');
+require('bootstrap/js/dist/tab.js');
+require('bootstrap/js/dist/tooltip.js');
+require('bootstrap/js/dist/modal.js');
+
+require('./index.scss');
 require('./img/ejemplo.png');
 require('./img/github.png');
 require('./img/home.png');
 
-//TODO: MEJORAR FUERTEMENTE EL CSS.
-let ArrowToUP = document.querySelector(".scroller") as HTMLDivElement;
-let NavMenu = document.querySelector(".menu") as HTMLDivElement;
-let MenuContent = document.querySelector('.menu_content') as HTMLUListElement;
+require('./ts/arrow.ts');
+require('./ts/modal.ts');
+require('./ts/nav.ts');
 
-
-let deslizamiento: number;
-
-
-document.addEventListener("scroll", (e) => {
-    
-    deslizamiento = document.documentElement.scrollTop;
-    if(deslizamiento > 480){
-        ArrowToUP.style.visibility="visible";
-        ArrowToUP.style.opacity="1";
-        ArrowToUP.style.cursor="pointer";
-    }else{
-        ArrowToUP.style.opacity="0";
-        ArrowToUP.style.visibility="hidden";
-        ArrowToUP.style.cursor="initial";
-    }
-});
-ArrowToUP.addEventListener("click", () => document.documentElement.scrollTop = 0);
-
-NavMenu.addEventListener('click', (e : Event) => {
-    let Anchor = e.target as HTMLAnchorElement;
-
-    if (Anchor.id === 'menu_trigger' && window.innerWidth <= 575 ) {
-        
-
-        if (getComputedStyle(MenuContent).height == '0px') {
-            MenuContent.style.height = `${MenuContent.scrollHeight.toString()}px`
-        } else {
-            MenuContent.style.height = '0px'
-        }
-        
-        
-    }
-    
-})
-
-
+$(() => { $('[data-toggle="tooltip"]').tooltip()});

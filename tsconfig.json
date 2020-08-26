@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
     "strict": true,
-    "outDir": "./prod/",
+    // "outDir": "./prod/",
     "module": "es6",
     "moduleResolution": "node",
     "target": "es5",
     "allowJs": true,
     "jsx": "react",
-
-    /* "typeRoots": [
-      "node_modules/@types"
-    ], */
+    "sourceMap": true,
     "lib": [
       "dom"
     ]

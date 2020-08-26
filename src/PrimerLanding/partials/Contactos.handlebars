@@ -1,1 +1,43 @@
-<p>CONTACTOS</p>
+<form action="" method="POST" id="Mycontact">
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6">
+
+      <div class="form-group ">
+
+        <label for="nombreUser"><i class="fas fa-user-circle"></i> Nombre</label>
+        <input type="text" class="form-control" id="nombreUser" aria-describedby="emailHelp"
+          placeholder="Escribe tu nombre" required>
+        <small id="emailHelp" class="form-text text-muted">Tu nombre aqui</small>
+      </div>
+      <div class="form-group">
+
+        <label for="opciones"> <i class="fas fa-globe"></i> Ubicacion</label>
+        <select class="form-control" name="" id="opciones" required>
+          <option value="America">America</option>
+          <option value="Europa">Europa</option>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+        <small class="form-text text-muted">La ubicacion por defecto es America</small>
+      </div>
+
+
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group">
+        <label for="myComentario"> <i class="far fa-comment-alt"></i> Comentario</label>
+        <textarea name="commentarios" class=" form-control" id="myComentario" maxlength="400" rows="5" required placeholder="Lorem Ipsum..."></textarea>
+        <small id="helpComentario" class="form-text text-muted">Maximo 400 caracteres</small>
+      </div>
+    </div>
+
+  </div>
+
+  <button type="submit" id="form-boton" class="btn btn-primary d-block w-75 mx-auto" ><i class="far fa-paper-plane"></i> Enviar</button>
+
+
+
+</form>

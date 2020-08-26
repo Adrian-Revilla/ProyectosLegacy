@@ -4,9 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CompressionPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //nota: FALTA INICIALIZAR EL PLUGIN DE BUNDLE ANALIZER
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 module.exports = env => {
@@ -32,74 +33,44 @@ module.exports = env => {
     { test: /\.css$/i, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
     { test: /\.s[ac]ss$/i, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
     { test: /\.(jpg|png|jpeg)$/i, loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'images' }}
-
   ];
 
   //plugins
   const HTMLWEBPACKPLUGINOPTS = {
     filename: 'index.html',
     template: `src/${FOLDER}/index.handlebars`,
-    inject: false
+    inject: true
   };
+
+  let resolve = {extensions: ['.tsx', '.ts', '.js']}
 
   return {
     entry: { main: ENTRY },
     output: { path: OUTPUT, filename: JSFILENAME },
     mode: MODE,
-
+    stats:'normal',
     module: { rules: WEBPACKMODULERULES },
 
-    resolve: { extensions: ['.tsx', '.ts', '.js'] },
+    resolve: {...resolve},
 
     plugins: [
-      new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS),
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({ filename: 'bundle.css' }),
-      // new BundleAnalyzerPlugin()
+      new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS),
+      // new BundleAnalyzerPlugin(),
+      new CompressionPlugin()
     ],
     optimization: {
       minimize: true,
       minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
     },
-
+    //en el dia 26 de agosto no he probado el webpack config con este asset. sirve para poder declaras reactjs SIN INCLUIRLO EN EL BUNDLE 
+    // SOLO LO HE PROBADO CON JAVASCRIPT Y NO CON TYPESCRIPT
+    externals: {
+      "react": "React",
+      "react-dom": "ReactDOM",
+      jquery: 'jQuery'
+    }
   }
 
 }
-/* externals : {
-
-}, */
-
-
-/* {
-test: /\.(jpg|png|jpeg)$/i,
-loader: 'file-loader',
-options: {
-name: '[name].[ext]',
-outputPath:'images'
-}
-
-}, */
-/* {
-test: /\.(ico)$/i,
-loader: 'file-loader',
-options: {
-name: '[name].[ext]',
-}
-
-}, */
-/* {
-test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
-loader: 'url-loader',
-options: {
-name: '[name].[ext]',
-outputPath:'fonts'
-}
-} */
-
-
-/*
-  optimization: {
-      minimize: true,
-      minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
-    },
-
-*/
