@@ -12,7 +12,9 @@
     "Carrousel": " npx webpack-dev-server --env.var1=Carrousel --env.var2=extra --config webpack.config.js",
     "PrimerLanding": " npx webpack-dev-server --env.var1=PrimerLanding --env.var2=extra --config webpack.config.js",
     "PrimerLandingProd": " npx webpack --env.var1=PrimerLanding --env.var2=extra --config webpack.config_prod.js",
-    "DragAndDrop": " npx webpack-dev-server --env.var1=DragAndDrop --env.var2=extra --config webpack.config.js"
+    "DragAndDrop": " npx webpack-dev-server --env.var1=DragAndDrop --env.var2=extra --config webpack.config.js",
+
+    "Calculator": "npx webpack-dev-server --env.var1=Calculator --env.var2=extra --config webpack.config.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="h">
+  <title>Calculadora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container   min-vh-100 d-flex flex-column  justify-content-center">
+    <header class="align-self-center mb-4">
+      <h1 class="font-weight-light">Calculadora</h1>
+    </header>
+
+    <main class="row">
+
+      <section class="col-12 col-sm-4  d-flex flex-column mb-4">
+        <input type="number" class="form-control d-block" id="first_term" placeholder="...">
+        <small class="text-muted form-text">Primer Termino</small>
+      </section>
+
+      <section class="col-12 col-sm-4 d-flex flex-column justify-content-center mb-4">
+        <select name="operacion" class=" custom-select">
+          <option value="+">Sumar</option>
+          <option value="-">Restar</option>
+          <option value="*">Multiplicar</option>
+          <option value="/">Dividir</option>
+        </select>
+        <small class="text-muted form-text">Opcion por defecto: Sumar</small>
+      </section>
+
+      <section class="col-12 col-sm-4  d-flex flex-column mb-4">
+
+        <input type="number" class="form-control d-block" id="second_term" placeholder="...">
+        <small class="text-muted">Segundo Termino</small>
+
+      </section>
+
+      <section class="col-12  d-flex  flex-column flex-sm-row  justify-content-start mb-4">
+        <div class="mr-sm-1 ">
+
+          <button type="button" class="btn btn-primary d-block mb-4 w-100" id="do_operation">Realizar operación</button>
+        </div>
+        <div class=" flex-grow-1  ">
+          <input type="text" class="form-control  mb-4 w-100  " id="result " placeholder="0" readonly>
+        </div>
+
+      </section>
+      <section class="col-12" id="error_column">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> AQUI VOY A PONER EL ERROR O LA EXPEXCION QUE ME LANZO JAVASCRIPT
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+
+</body>
+
+</html>
