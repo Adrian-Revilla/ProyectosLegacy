@@ -15,15 +15,6 @@ library.add(faHome, faCheck, faCommentAlt, faComments,
 );
 dom.watch();
 
-
-
-
-
-
-
-
-    
-
 require('bootstrap/js/dist/util');
 require('bootstrap/js/dist/tab.js');
 require('bootstrap/js/dist/tooltip.js');

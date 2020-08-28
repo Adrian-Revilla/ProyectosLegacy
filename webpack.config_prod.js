@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //nota: FALTA INICIALIZAR EL PLUGIN DE BUNDLE ANALIZER
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 module.exports = env => {
@@ -57,8 +57,8 @@ module.exports = env => {
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({ filename: 'bundle.css' }),
       new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS),
-      // new BundleAnalyzerPlugin(),
-      new CompressionPlugin()
+      // new BundleAnalyzerPlugin()
+      // new CompressionPlugin()
     ],
     optimization: {
       minimize: true,
@@ -69,7 +69,7 @@ module.exports = env => {
     externals: {
       "react": "React",
       "react-dom": "ReactDOM",
-      jquery: 'jQuery'
+      jquery: 'jQuery',
     }
   }
 
