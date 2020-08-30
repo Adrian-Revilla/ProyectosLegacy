@@ -17,15 +17,15 @@
       <h1 class="font-weight-light">Calculadora</h1>
     </header>
 
-    <main class="row">
+    <main class="row" style="transition: all 2s;">
 
       <section class="col-12 col-sm-4  d-flex flex-column mb-4">
-        <input type="number" class="form-control d-block" id="first_term" placeholder="...">
+        <input type="number" class="form-control d-block" id="first_term" placeholder="..." step="any">
         <small class="text-muted form-text">Primer Termino</small>
       </section>
 
       <section class="col-12 col-sm-4 d-flex flex-column justify-content-center mb-4">
-        <select name="operacion" class=" custom-select">
+        <select name="operacion" class=" custom-select" id="_operacion">
           <option value="+">Sumar</option>
           <option value="-">Restar</option>
           <option value="*">Multiplicar</option>
@@ -36,7 +36,7 @@
 
       <section class="col-12 col-sm-4  d-flex flex-column mb-4">
 
-        <input type="number" class="form-control d-block" id="second_term" placeholder="...">
+        <input type="number" class="form-control d-block" id="second_term" placeholder="..." step="any">
         <small class="text-muted">Segundo Termino</small>
 
       </section>
@@ -47,24 +47,28 @@
           <button type="button" class="btn btn-primary d-block mb-4 w-100" id="do_operation">Realizar operación</button>
         </div>
         <div class=" flex-grow-1  ">
-          <input type="text" class="form-control  mb-4 w-100  " id="result " placeholder="0" readonly>
+          <input type="text" class="form-control  mb-4 w-100  " id="result" placeholder="0" readonly>
         </div>
 
       </section>
+      
       <section class="col-12" id="error_column">
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+       
+        {{!-- <div class="alert alert-warning alert-dismissible fade" role="alert">
           <strong>Holy guacamole!</strong> AQUI VOY A PONER EL ERROR O LA EXPEXCION QUE ME LANZO JAVASCRIPT
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
+        </div> --}}
+
+
       </section>
 
     </main>
 
   </div>
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </body>
 
 </html>
