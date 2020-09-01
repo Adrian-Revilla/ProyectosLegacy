@@ -1,16 +1,22 @@
 import * as $ from 'jquery';
-// esto funciona pero son demasiados iconos
-// require('@fortawesome/fontawesome-free/js/all');
+
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import {faHome,faCheck, faGlobe,faComments,faUserCircle,faCheckDouble,faSortUp,faSortAmountUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome, faCheck, faGlobe, faComments,
+  faUserCircle, faCheckDouble,
+  faSortUp, faSortAmountUp, faDatabase,
+  faServer,faPencilRuler,faStar
+} from '@fortawesome/free-solid-svg-icons';
+
 import {faPaperPlane,faCommentAlt } from '@fortawesome/free-regular-svg-icons';
-import {faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import {faGithubSquare,faInstagram,faTwitter,faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(faHome, faCheck, faCommentAlt, faComments,
   faUserCircle, faPaperPlane, faGlobe, faPaperPlane,
-  faGithubSquare,faCheckDouble,faSortUp,faSortAmountUp
+  faGithubSquare, faCheckDouble, faSortUp, faSortAmountUp,
+  faDatabase,faServer,faPencilRuler,faStar,faFacebookF,faInstagram,faTwitter
   
 );
 dom.watch();
