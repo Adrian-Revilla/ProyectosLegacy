@@ -1,6 +1,5 @@
 import * as $ from 'jquery';
 
-
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faHome, faCheck, faGlobe, faComments,
@@ -19,6 +18,7 @@ library.add(faHome, faCheck, faCommentAlt, faComments,
   faDatabase,faServer,faPencilRuler,faStar,faFacebookF,faInstagram,faTwitter
   
 );
+
 dom.watch();
 
 require('bootstrap/js/dist/util');
@@ -28,8 +28,7 @@ require('bootstrap/js/dist/modal.js');
 
 require('./index.scss');
 require('./img/ejemplo.png');
-require('./img/github.png');
-require('./img/home.png');
+
 
 require('./ts/arrow.ts');
 require('./ts/modal.ts');

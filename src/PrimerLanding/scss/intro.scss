@@ -3,22 +3,22 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
   width: 100%;
-
+  
+  //ambos hijos
   .flexitem{
 
     flex:0 1 500px;
     margin: 5px;
   }
+  //hijo flex que tiene blockquote
   .quote{
     font-style: italic;
     font-weight: bold;  
   }
+  //hijo flex que tiene figurecaption
   .imagen{
-    display: block;
 
-    
     img{
       display: block;
       margin: 0 auto;
@@ -32,8 +32,6 @@
         transform: rotate(5deg);
       }  
     }
-    
-
   }
   
 }

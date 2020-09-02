@@ -42,20 +42,21 @@ module.exports = env => {
     inject: true
   };
 
+  const MiniCssExtractPlugin_opt = {filename: 'bundle.css'}
+
   let resolve = {extensions: ['.tsx', '.ts', '.js']}
 
   return {
     entry: { main: ENTRY },
     output: { path: OUTPUT, filename: JSFILENAME },
     mode: MODE,
-    stats:'normal',
     module: { rules: WEBPACKMODULERULES },
 
     resolve: {...resolve},
 
     plugins: [
       new CleanWebpackPlugin(),
-      new MiniCssExtractPlugin({ filename: 'bundle.css' }),
+      new MiniCssExtractPlugin(MiniCssExtractPlugin_opt),
       new HtmlWebpackPlugin(HTMLWEBPACKPLUGINOPTS),
       // new BundleAnalyzerPlugin()
       // new CompressionPlugin()
@@ -64,6 +65,7 @@ module.exports = env => {
       minimize: true,
       minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
     },
+
     //en el dia 26 de agosto no he probado el webpack config con este asset. sirve para poder declaras reactjs SIN INCLUIRLO EN EL BUNDLE 
     // SOLO LO HE PROBADO CON JAVASCRIPT Y NO CON TYPESCRIPT
     externals: {

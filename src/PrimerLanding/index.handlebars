@@ -1,35 +1,39 @@
+{{!-- TODO: CAMBIAR EL LOREM IPSUM  DEL DOCUMENTO --}}
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
   <meta charset="utf-8">
-  <title>Landing</title>
+  <title>Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"
+  >
+
 </head>
 
 <body class="d-flex flex-column min-vh-100 ">
 
   {{!-- NAVEGACION --}}
-  {{> partials/nav}}
+  {{> partials/StickyNav}}
 
-  {{> partials/intro}}
+  {{> partials/Header}}
 
   <hr />
 
-
-  {{> partials/main}}
-
+  {{> partials/NavList}}
   
+  {{> partials/Footer}}
 
-  {{> partials/footer}}
- 
-  {{> partials/modal}}
+  {{> partials/Modal}}
 
-  <div class="scroller"><i class="fas fa-sort-amount-up " style="color:#1aabd5;" class="d-block"></i></div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  
+  {{> partials/Scroll}}
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

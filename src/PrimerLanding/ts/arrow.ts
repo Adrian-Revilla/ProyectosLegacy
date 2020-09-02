@@ -1,8 +1,5 @@
-
-//TODO: MEJORAR FUERTEMENTE EL CSS.
 let ArrowToUP = document.querySelector(".scroller") as HTMLDivElement;
 let deslizamiento: number;
-
 
 document.addEventListener("scroll", (e) => {
     

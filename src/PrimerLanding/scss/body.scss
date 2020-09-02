@@ -1,19 +1,9 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+html {
   scroll-behavior: smooth;
 }
-body{
-  font-family: 'Open Sans',sans-serif;
-  color: #00171F;
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #00171f;
   margin: 0;
 }
-
-#tarjetas div div.card{
-  transition: box-shadow 500ms;
-  &:hover{
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
-  }
-}
-
-
-
-// box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;

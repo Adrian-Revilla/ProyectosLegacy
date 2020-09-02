@@ -13,10 +13,7 @@
   li {
     display: block;
     cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
 
-    }
     a {
       display: block;
       color: white;
@@ -24,26 +21,33 @@
       padding: 1em;
       text-align: center;
     }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 
+  //li especial
   #github {
-    margin: 0 auto;
-    &:hover{
-      background-color:initial;
-    }
-    a{
-      color:white;
-      font-size: 40px;
+    
+    color: white;
+    font-size: 40px;
+    
+    //dentro del tag <a></a> se encuentra el icono de github
+    a {
       padding: 0;
-      opacity: 0.5;
+      opacity: 0.6;
       transition: opacity 500ms;
-      &:hover,&:focus{
+      &:focus,&:hover{
         opacity: 1;
       }
     }
-    i{
-      display: block;
+    //elimina el efecto del background de los otros li
+    &:hover,
+    &:focus {
+      background-color: initial;
     }
+
   }
 }
 
@@ -53,11 +57,11 @@
   flex-direction: column;
 
   @extend %resetUL;
-  @extend %estilos_nav
-;
+  @extend %estilos_nav;
 
-
+  // el submenu del nav.
   .menu {
+
     .menu_content {
       @extend %resetUL;
 
@@ -85,9 +89,7 @@
   }
 }
 
-
 @media screen and (min-width: 576px) {
-  
   .lista {
     flex-direction: row;
     align-items: center;
@@ -116,9 +118,11 @@
         visibility: visible;
       }
     }
-
+    
+    //ubicar a la derecha 
     #github {
-      margin: 0 5px 0 auto;
+      margin-left: auto;
+      margin-right: 5px;
     }
   }
 }

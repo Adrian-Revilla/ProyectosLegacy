@@ -12,8 +12,6 @@ NavMenu.addEventListener('click', (e: Event) => {
       } else {
           MenuContent.style.height = '0px'
       }
-      
-      
   }
   
 })

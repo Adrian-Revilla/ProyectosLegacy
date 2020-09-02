@@ -1,22 +1,6 @@
-.options{
-  display: flex;
-  list-style-type: none;
-  list-style-position: outside;
-  border-radius: 0.2em;
-  justify-items: stretch;
-  border: 1px solid red;
-
-  width: 80%;
-  margin: 1em auto 1em auto; 
-}
-.mainn{
-  
- width: 90%;
- margin: 1em auto 1em auto ;
- 
- padding: 1em;
- 
- p{
-   font-weight:bold;
- }
+#tarjetas div div.card {
+  transition: box-shadow 500ms;
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
 }
