@@ -1,13 +1,5 @@
 import * as $ from 'jquery';
 
-//TODO: MANEJAR EL ERROR DE VALOR MAXIMO DE JAVASCRIPT (ES DECIR EL MAX_VALUE)
-/* 
-ALGO COMO :
-SI VALOR1 + VALOR2 >= MAXVALUE, LANZAR EXCEPCION
-
-*/
-
-
 //row de errores.
 let error_column = document.querySelector('#error_column') as HTMLElement;
 //div .alert

@@ -81,10 +81,7 @@ to{opacity:1; visibility: visible};
     margin: 0 auto;
 
 }
-#modal #modal_dentro #tooltip span{
-    
-    
-}
+
 #modal #modal_dentro #tooltip::before{
     content: " ";
     display: block;

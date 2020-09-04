@@ -1,6 +1,6 @@
-<div class="tab-pane fade p-3" id="pills-contacto" role="tabpanel" aria-labelledby="pills-contact-tab">
+<div class="tab-pane fade p-3" id="pills-contacto" role="tabpanel" >
 
-  <form action="" method="POST" id="Mycontact">
+  <form action="/" method="POST" id="Mycontact">
 
     <div class="row">
 
@@ -9,7 +9,7 @@
         <div class="form-group ">
 
           <label for="nombreUser"><i class="fas fa-user-circle"></i> Nombre</label>
-          <input type="text" class="form-control" id="nombreUser" aria-describedby="emailHelp"
+          <input type="text" class="form-control" id="nombreUser" 
             placeholder="Escribe tu nombre" required>
           <small id="emailHelp" class="form-text text-muted">Tu nombre aqui</small>
 
@@ -18,8 +18,8 @@
         <div class="form-group">
 
           <label for="opciones"> <i class="fas fa-globe"></i> Ubicacion</label>
-          <select class="custom-select" name="" id="opciones" required>
-
+          <select class="custom-select" name="seleccion_continente" id="opciones" required>
+            <option value="" >Por favor, seleccione una opción</option>
             <option value="America">América</option>
             <option value="Europa">Europa</option>
             <option value="Africa">África</option>
@@ -27,7 +27,7 @@
             <option value="Oceania">Oceanía</option>
 
           </select>
-          <small class="form-text text-muted">La ubicacion por defecto es America</small>
+          
 
         </div>
 
@@ -40,8 +40,7 @@
 
           <label for="myComentario"> <i class="far fa-comment-alt"></i> Comentario</label>
           <textarea name="commentarios" class=" form-control" id="myComentario" maxlength="400" rows="5" required
-            placeholder="Lorem Ipsum...">
-          </textarea>
+            placeholder="Lorem Ipsum..."></textarea>
           <small id="helpComentario" class="form-text text-muted">Maximo 400 caracteres</small>
 
         </div>

@@ -25,13 +25,16 @@
       </section>
 
       <section class="col-12 col-sm-4 d-flex flex-column justify-content-center mb-4">
+        
         <select name="operacion" class=" custom-select" id="_operacion">
           <option value="+">Sumar</option>
           <option value="-">Restar</option>
           <option value="*">Multiplicar</option>
           <option value="/">Dividir</option>
         </select>
+
         <small class="text-muted form-text">Opcion por defecto: Sumar</small>
+        
       </section>
 
       <section class="col-12 col-sm-4  d-flex flex-column mb-4">
@@ -42,10 +45,11 @@
       </section>
 
       <section class="col-12  d-flex  flex-column flex-sm-row  justify-content-start mb-4">
+        
         <div class="mr-sm-1 ">
-
           <button type="button" class="btn btn-primary d-block mb-4 w-100" id="do_operation">Realizar operación</button>
         </div>
+
         <div class=" flex-grow-1  ">
           <input type="text" class="form-control  mb-4 w-100  " id="result" placeholder="0" readonly>
         </div>
@@ -54,14 +58,6 @@
       
       <section class="col-12" id="error_column">
        
-        {{!-- <div class="alert alert-warning alert-dismissible fade" role="alert">
-          <strong>Holy guacamole!</strong> AQUI VOY A PONER EL ERROR O LA EXPEXCION QUE ME LANZO JAVASCRIPT
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> --}}
-
-
       </section>
 
     </main>

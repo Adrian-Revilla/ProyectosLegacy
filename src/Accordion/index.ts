@@ -1,7 +1,5 @@
 require('./index.scss');
 
-"use strict";
-
 const DomMainTag = document.querySelector("main") as HTMLElement;
 
 DomMainTag.addEventListener('click', (e: Event) => {
