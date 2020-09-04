@@ -1,28 +1,45 @@
-{{!-- los tres botones debajo de intro --}}
-<ul class="nav nav-pills mt-2  justify-content-center" id="pills-tab" role="tablist">
+{{!-- ESTOS SON LOS TRES BOTONES DEBAJO DE LA IMAGEN Y EL BLOCKQUOTE --}}
+
+<ul class="nav nav-pills mt-2  justify-content-center" role="tablist">
+
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" style="vertical-align: middle;" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-      <i class="fas fa-home"></i> Home</a>
+
+    <a class="nav-link active" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+      <i class="fas fa-home"></i>
+      Home
+    </a>
+
   </li>
+
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-      <i class="fas fa-check"></i> Servicios</a>
+
+    <a class="nav-link" data-toggle="pill" href="#pills-servicios" aria-controls="pills-profile" aria-selected="false" role="tab">
+      <i class="fas fa-check"></i>
+      Servicios
+    </a>
+
   </li>
+
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
-      <i class="fas fa-comments"></i> Contacto</a>
+
+    <a class="nav-link" data-toggle="pill" href="#pills-contacto" role="tab" aria-controls="pills-contact" aria-selected="false">
+      <i class="fas fa-comments"></i>
+      Contacto
+    </a>
+
   </li>
+
 </ul>
 
 
-{{!-- LOS TRES  tabs correspondientes a los arriba --}}
+{{!-- Los 3 contenedores correspondientes a las pildoras de arriba --}}
+{{!-- id="pills-tabContent" --}}
+<div class="tab-content " >
 
-<div class="tab-content " id="pills-tabContent">
-  
-  {{> NavContent/Home}}  
- 
+  {{> NavContent/Home}}
+
   {{> NavContent/Services}}
 
   {{> NavContent/Contact}}
- 
+
 </div>

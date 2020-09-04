@@ -8,14 +8,14 @@ import {
   faServer,faPencilRuler,faStar
 } from '@fortawesome/free-solid-svg-icons';
 
-import {faPaperPlane,faCommentAlt } from '@fortawesome/free-regular-svg-icons';
+import {faPaperPlane,faCommentAlt,faHandPointer } from '@fortawesome/free-regular-svg-icons';
 import {faGithubSquare,faInstagram,faTwitter,faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(faHome, faCheck, faCommentAlt, faComments,
   faUserCircle, faPaperPlane, faGlobe, faPaperPlane,
   faGithubSquare, faCheckDouble, faSortUp, faSortAmountUp,
-  faDatabase,faServer,faPencilRuler,faStar,faFacebookF,faInstagram,faTwitter
+  faDatabase,faServer,faPencilRuler,faStar,faFacebookF,faInstagram,faTwitter,faHandPointer
   
 );
 
