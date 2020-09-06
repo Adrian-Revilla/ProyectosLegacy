@@ -1,0 +1,27 @@
+<h2 class="text-center mt-2" ondragstart="return false;">
+  ¿Qué deseas hacer?
+  <span style="font-size: 35px;">&#128172;</span>
+</h2>
+
+<nav class="mt-3" ondragstart="return false;">
+  {{!-- w-75 --}}
+  <ul class="nav nav-pills nav-fill m-4  text-bolder" role="tablist" style="margin: 0 auto;">
+
+    <li class="nav-item h5 ">
+      <a href="#agregar" class="nav-link active" id="agregar-pill" data-toggle="tab">Agregar</a>
+    </li>
+
+    <li class="nav-item h5 ">
+      <a href="#buscar" class="nav-link" id="buscar-pill" data-toggle="tab"> Buscar (DESARROLLO) </a>
+    </li>
+
+  </ul>
+</nav>
+
+
+<section class="tab-content  m-4 " style="margin: 0 auto;">
+
+  {{> AgregarData}}
+  {{> BuscarData}}
+
+</section>

@@ -6,6 +6,7 @@
   "scripts": {
     "Accordion": "npx webpack-dev-server --env.var1=Accordion --env.var2=extra --config webpack.config.js",
     "AccordionProd": " npx webpack --env.var1=Accordion --env.var2=extra --config webpack.config_prod.js",
+    
     "GridTemplate": "npx webpack-dev-server --env.var1=GridTemplate --env.var2=extra --config webpack.config.js",
     "GridTemplateProd": " npx webpack --env.var1=GridTemplate --env.var2=extra --config webpack.config_prod.js",
 
@@ -14,6 +15,7 @@
 
     "PrimerLanding": " npx webpack-dev-server --env.var1=PrimerLanding --env.var2=extra --config webpack.config.js",
     "PrimerLandingProd": " npx webpack --env.var1=PrimerLanding --env.var2=extra --config webpack.config_prod.js",
+
     "DragAndDrop": " npx webpack-dev-server --env.var1=DragAndDrop --env.var2=extra --config webpack.config.js",
 
     "Calculator": "npx webpack-dev-server --env.var1=Calculator --env.var2=extra --config webpack.config.js",

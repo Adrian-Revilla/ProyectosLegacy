@@ -1,8 +1,15 @@
+main,
+header {
+  display: none;
+}
+#announcement {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
-
-
-.hover_x{
-  opacity: .6;
+.hover_x {
+  opacity: 0.6;
   cursor: pointer;
   font-weight: bold;
   user-select: none;
@@ -10,14 +17,31 @@
   font-size: 26px;
 }
 
-.hover_x:hover{
+.hover_x:hover {
   opacity: 1;
 }
 
-.fixed{
+.fixed {
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  main,
+  header {
+    display: block;
+  }
+}
+
+#agregar_flexPanel {
+  display: flex;
+  flex-wrap: nowrap;
+  
+  .FormData,
+  .ListaData {
+    flex: 1 0 50%;
+  }
 }

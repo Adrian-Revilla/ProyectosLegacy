@@ -4,6 +4,7 @@
 <li><h3>✔ GRID-TEMPLATE </h3></li>
 <li><h3>✔ PrimerLanding</h3></li>
 <li><h3>✔ Calculator</h3></li>
+<li><h3>✔ Mywebpaint (otro repositorio)</h3></li>
 </ul>
 
 <h1>En progreso</h1>
