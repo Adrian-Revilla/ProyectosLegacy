@@ -40,6 +40,14 @@ header {
   display: flex;
   flex-wrap: nowrap;
   
+  
+  .FormData{
+    outline: 1px dotted black;
+  }
+  .ListaData:hover{
+    cursor: move;
+  }
+
   .FormData,
   .ListaData {
     flex: 1 0 50%;
