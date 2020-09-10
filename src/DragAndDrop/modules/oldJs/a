@@ -1,0 +1,24 @@
+private RestablecerLI = (e: Event) => {
+
+    document.querySelector('.FormData')?.removeChild(this.EstructuraBase!)
+
+    // this.RestaurarLI(fieldset.id)
+    private RestaurarLI = (id: string) => {
+
+
+      let LI = document.createElement('LI');
+      LI.classList.add('list-group-item', 'list-group-item-action')
+  
+  
+      switch (id) {
+        case 'Avatar_':
+          LI.id = 'Avatar';
+          LI.innerText = 'Avatar'
+          LI.draggable = true
+          break;
+  
+  
+      }
+      document.querySelector('.ListaData')?.appendChild(LI)
+  
+    }

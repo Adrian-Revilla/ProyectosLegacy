@@ -1,43 +1,61 @@
-abstract class Estructura {
 
-  abstract ContenidoCARD_DIV(): void;
+abstract class EstructuraHTML {
 
+  /* VARIABLES DE CLASE */
 
-  protected GenerarEstructura(Name: string): HTMLFieldSetElement {
-    /* fieldset externo, carta div */
+  protected abstract CuerpoBootstrapCARD(): void;
 
-    let FIELDSET, CARD_DIV, CARD_HEADER;
+  protected EstructuraBase: HTMLFieldSetElement | null = null;
 
-    FIELDSET = document.createElement('fieldset')
+  protected BootstrapCARD: HTMLDivElement | null = null;
 
-    CARD_DIV = document.createElement('div')
-    CARD_DIV.classList.add('card', 'mb-2')
+  protected BootstrapCARD_HEADER: HTMLElement | null = null;
 
-    CARD_HEADER = this.GenerarCARD_HEADER(CARD_DIV, Name)
+  /* FUNCIONES */
 
-    CARD_DIV.appendChild(CARD_HEADER)
-
-    FIELDSET.appendChild(CARD_DIV)
-
-    FIELDSET.id = `${Name}_`
-
-
-    return FIELDSET
+  protected GenerarEstructura(ID: string, TituloBootstrapCard: string) {
+    return this.GenerarFieldset(ID, this.GenerarBootstrapCARD(TituloBootstrapCard))
   }
 
-  private GenerarCARD_HEADER(CARD_DIV: HTMLDivElement, Name: string): HTMLHeadElement {
+  private GenerarFieldset = (ID: string, BootstrapCARD: HTMLDivElement) => {
+    let elemento = document.createElement('fieldset') as HTMLFieldSetElement
+    elemento.appendChild(BootstrapCARD)
+    elemento.id = `${ID}`
+
+    return elemento
+  }
+
+  private GenerarBootstrapCARD = (TituloBootstrapCard: string) => {
+
+    this.BootstrapCARD = document.createElement('div')
+
+    this.BootstrapCARD.classList.add('card', 'mb-2');
+
+    this.BootstrapCARD_HEADER = this.GenerarBootstrapCard_HEADER(TituloBootstrapCard)
+
+    this.BootstrapCARD.appendChild(this.BootstrapCARD_HEADER)
+
+    return this.BootstrapCARD
+  }
+
+  private GenerarBootstrapCard_HEADER(Titulo: string): HTMLElement {
 
     let Header = document.createElement('header')
     let h3 = document.createElement('h3')
     let X = document.createElement('button')
 
-    Header.classList.add('card-header', 'd-flex', 'justify-content-between', 'flex-row', 'align-items-center')
+    Header.classList.add
+      (
+        'card-header', 'd-flex',
+        'justify-content-between',
+        'flex-row', 'align-items-center'
+      );
 
-    h3.innerText = Name;
+    h3.innerText = Titulo;
     X.innerHTML = '&times;'
     X.classList.add('close')
     X.type = 'button'
-    X.addEventListener('click', this.AutoDestruirse)
+    X.addEventListener('click', this.RestablecerLI)
 
     Header.appendChild(h3)
     Header.appendChild(X)
@@ -47,75 +65,49 @@ abstract class Estructura {
   }
 
 
+  protected InyectarEnDropZone(Elemento: HTMLFieldSetElement) {
 
-  private AutoDestruirse = (e: Event) => {
-
-    let target = e.target as HTMLButtonElement;
-    let fieldset = target.parentElement?.parentElement?.parentElement as HTMLFieldSetElement;
-
-    console.log('bip bop, ¡me auto destruyo! ')
-    document.querySelector('.FormData')?.removeChild(fieldset)
-    
-    
-    this.RestaurarLI(fieldset.id)
+    /* antes de inyectar al dom, se elimina. de list data*/
+    let ListaDraggable = document.querySelector(`#ListaDraggable`)
+    let LI = document.querySelector(`#${Elemento.id}`)
+    ListaDraggable?.removeChild(LI!)
+    // agrega Elemento a el dom
+    document.querySelector('#FormularioDraggable')?.appendChild(Elemento)
 
   }
 
-
-  private RestaurarLI = (id:string) => {
-    
-    
-    let LI = document.createElement('LI');
-    LI.classList.add('list-group-item', 'list-group-item-action')
-  
-
-    switch (id) {
-      case 'Avatar_':
-        LI.id = 'Avatar';
-        LI.innerText = 'Avatar'
-        LI.draggable=true
-      break;
-      
-      
-    }
-    document.querySelector('.ListaData')?.appendChild(LI)
-
-  }
-
-  EliminarDeListData(Elemento: string) {
-    console.log(Elemento)
-    let e = document.querySelector(`#${Elemento}`) as HTMLLIElement
-    document.querySelector('.ListaData')?.removeChild(e);
-  }
-
-
-  InyectarAlDom(e: HTMLElement) {
-    console.log('SOLO HACER ESTO CUANDO YA SE HAYA AÑADIDO EL CONTENIDO ESPECIAL DE CADA CLASE')
-    document.querySelector('.FormData')?.appendChild(e)
+  private RestablecerLI = (e: Event) => {
+    document.querySelector('#FormularioDraggable')?.removeChild(this.EstructuraBase!)
+    // this.RestaurarLI(fieldset.id)
 
   }
 }
 
-export class Avatar extends Estructura {
 
-  private Element: HTMLElement
 
-  constructor(private idName: string) {
+export class Avatar extends EstructuraHTML {
+
+
+  constructor(Avatar_ID: string, textContent: string) {
 
     super();
 
-    this.Element = super.GenerarEstructura(idName)
-    super.InyectarAlDom(this.Element)
-    super.EliminarDeListData(idName)
+    this.EstructuraBase = this.GenerarEstructura(Avatar_ID, textContent)
+
+    console.log('se esta inyectando. antes de estos deberia ejecutar cuerpo de bootstrap card')
+
+    this.InyectarEnDropZone(this.EstructuraBase);
   }
 
-  ContenidoCARD_DIV() {
-    console.log('IMPLEMENTANDO CONTENIDO PERSONALIZADO DE AVATAR DENTRO DE CARD_DIV')
+  protected CuerpoBootstrapCARD() {
+    console.log('IMPLEMENTANDO CONTENIDO PERSONALIZADO DE AVATAR DENTRO DE BOOTSTRAP DIV')
   }
 
-  get verInstancia(): HTMLElement {
-    return this.Element
+  get getElemento() {
+    return this.EstructuraBase?.ATTRIBUTE_NODE;
   }
 
 
 }
+
+
