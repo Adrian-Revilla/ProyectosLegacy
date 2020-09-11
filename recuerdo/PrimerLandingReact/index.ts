@@ -1,8 +1,0 @@
-// TODO: VER COMO CARRIZO CONVERTIR DE JSX COMUN A TYPESCRIPT
-
-//TODO: USAR BOOTSTRAP Y CSS GRID PARA ESTE PROYECTO
-
-// import './entry.js';
-
-import './entry.tsx';
-
