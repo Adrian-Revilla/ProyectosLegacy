@@ -104,7 +104,7 @@
 ```
 
 ### Nota sobre el repositorio
-* Las carpetas debajo de src/* contiente _Proyectos Aislados entre si_
+* Las carpetas debajo de src/* contiene _Proyectos Aislados entre si_
 * _webpack.config.js_ y _webpack.config_prod.js_  son archivos que usa webpack que a traves de la instalación de  [Loaders](https://webpack.js.org/loaders/)
 y [Plugins](https://webpack.js.org/concepts/plugins) pueden utilizarse para ejecutar distintos entornos:
   * **_webpack.config.js_ se usa para configurar un entorno en desarrollo (e incluye un servidor: webpack-dev-server)**
