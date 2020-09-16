@@ -108,6 +108,6 @@
 * _webpack.config.js_ y _webpack.config_prod.js_  son archivos que usa webpack que a traves de la instalación de  [Loaders](https://webpack.js.org/loaders/)
 y [Plugins](https://webpack.js.org/concepts/plugins) pueden utilizarse para ejecutar distintos entornos:
   * **_webpack.config.js_ se usa para configurar un entorno en desarrollo (e incluye un servidor: webpack-dev-server)**
-  * **_webpack.config_prod.js_ se usa para empaquetar todos el codigo fuente** (incluyendo imagenes, codigo scss/css y cualquier otro recurso necesario correspondiente a cada proyecto ) producir el 'bundle' que se  lleva a produccion
+  * **_webpack.config_prod.js_ se usa para empaquetar todo el codigo fuente** (incluyendo imagenes, codigo scss/css y cualquier otro recurso necesario correspondiente a cada proyecto )  y asi poder producir el 'bundle' que se  lleva a produccion
 * En el package.json se encuentra los scripts necesarios para poner los distintos proyectos tanto en desarrollo como en produccion   
 * tsconfig.json es un archivo de configuracion para implementar correctamente typescript sobre los proyectos (a traves de webpack)
