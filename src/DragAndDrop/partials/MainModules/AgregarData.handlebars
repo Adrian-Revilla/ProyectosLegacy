@@ -3,29 +3,21 @@
     <div id="agregar_flexPanel">
 
 
-        <ul class="list-group ListaData" draggable="false" id="ListaDraggable"> {{!-- ul --}}
+        <ul class="list-group  ListaData" draggable="false" id="ListaDraggable"> {{!-- ul --}}
 
-            <li class="list-group-item list-group-item-action list-group-item-dark" id="Avatar" draggable="true">Avatar</li>
+            <li class="list-group-item list-group-item-action" id="Avatar" draggable="true">Avatar</li>
 
-            <li class="list-group-item list-group-item-action list-group-item-dark" id="Nombre" draggable="true">Nombre y Apellidos</li>
+            <li class="list-group-item list-group-item-action" id="Nombre" draggable="true">Nombre y Apellidos</li>
 
-            <li class="list-group-item list-group-item-action list-group-item-dark" id="AnioYEdad" draggable="true">Edad y Año de nacimiento</li>
-{{!-- 
-            
+            <li class="list-group-item list-group-item-action" id="AnioYEdad" draggable="true">Edad y Año de nacimiento</li>
 
-            <li class="list-group-item list-group-item-action list-group-item-dark" id="FechaYEdad" draggable="true">
-                Edad y Año de
-                nacimiento
-            </li>
+            <li class="list-group-item list-group-item-action " id="Biografia" draggable="true">Biografía</li> 
 
-            <li class="list-group-item list-group-item-action list-group-item-dark" id="Biografia" draggable="true">
-                Biografía
-            </li> --}}
 
         </ul>
 
         <form class="  ml-1 FormData " enctype="multipart/form-data" autocomplete="off" id="FormularioDraggable" {{!-- form --}}
-            ondragstart="return false;" action="/" method="POST">
+             action="/" method="POST">
         </form>
 
     </div>

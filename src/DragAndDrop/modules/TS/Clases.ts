@@ -21,7 +21,6 @@ abstract class EstructuraHTML {
     let elemento = document.createElement('fieldset') as HTMLFieldSetElement
     elemento.appendChild(BootstrapCARD)
     elemento.id = `${ID}`
-
     return elemento
   }
 
@@ -61,41 +60,69 @@ abstract class EstructuraHTML {
     Header.appendChild(X)
 
     return Header
-
   }
 
 
   protected InyectarEnDropZone(Elemento: HTMLFieldSetElement) {
 
-    /* antes de inyectar al dom, se elimina. de list data*/
-    let ListaDraggable = document.querySelector(`#ListaDraggable`)
-    let LI = document.querySelector(`#${Elemento.id}`)
-    ListaDraggable?.removeChild(LI!)
-    // agrega Elemento a el dom
-    document.querySelector('#FormularioDraggable')?.appendChild(Elemento)
+    let ListaDraggable = document.querySelector(`#ListaDraggable`)!
+    let LI = document.querySelector(`#${Elemento.id}`)!
+    
 
+    /* antes de inyectar al dom, se elimina. de list data*/
+    ListaDraggable.removeChild(LI!)
+    // agrega Elemento a el dom
+    document.querySelector('#FormularioDraggable')!.appendChild(Elemento)
   }
 
   private RestablecerLI = (e: Event) => {
-    document.querySelector('#FormularioDraggable')?.removeChild(this.EstructuraBase!)
-    // this.RestaurarLI(fieldset.id)
 
+    let ListaDraggable = document.querySelector(`#ListaDraggable`)!
+    let FormularioDragable = document.querySelector('#FormularioDraggable')!;
+    let li = document.createElement('li')
+    
+    // restaurar LI
+    
+    li.classList.add('list-group-item', 'list-group-item-action')
+    li.id = this.EstructuraBase!.id
+    li.textContent = this.BootstrapCARD_HEADER!.firstElementChild!.textContent
+    li.draggable = true
+    FormularioDragable!.removeChild(this.EstructuraBase!)
+    ListaDraggable.appendChild(li)
   }
 }
 
-
-
 export class Avatar extends EstructuraHTML {
-
 
   constructor(Avatar_ID: string, textContent: string) {
 
     super();
 
     this.EstructuraBase = this.GenerarEstructura(Avatar_ID, textContent)
+    console.log('se esta inyectando. antes de estos deberia ejecutar cuerpo de bootstrap card')
+    this.InyectarEnDropZone(this.EstructuraBase);
+  }
+
+  protected CuerpoBootstrapCARD() {
+    console.log('IMPLEMENTANDO CONTENIDO PERSONALIZADO DE AVATAR DENTRO DE BOOTSTRAP DIV')
+  }
+
+  get getElemento() {
+    return this.EstructuraBase?.ATTRIBUTE_NODE;
+  }
+
+}
+
+
+export class Nombre extends EstructuraHTML {
+
+  constructor(Nombre_ID: string, textContent: string) {
+
+    super();
+
+    this.EstructuraBase = this.GenerarEstructura(Nombre_ID, textContent)
 
     console.log('se esta inyectando. antes de estos deberia ejecutar cuerpo de bootstrap card')
-
     this.InyectarEnDropZone(this.EstructuraBase);
   }
 
@@ -110,4 +137,49 @@ export class Avatar extends EstructuraHTML {
 
 }
 
+export class AnioYEdad extends EstructuraHTML {
+
+  constructor(AnioYEdad_ID: string, textContent: string) {
+
+    super();
+
+    this.EstructuraBase = this.GenerarEstructura(AnioYEdad_ID, textContent)
+
+    console.log('se esta inyectando. antes de estos deberia ejecutar cuerpo de bootstrap card')
+    this.InyectarEnDropZone(this.EstructuraBase);
+  }
+
+  protected CuerpoBootstrapCARD() {
+    console.log('IMPLEMENTANDO CONTENIDO PERSONALIZADO DE AVATAR DENTRO DE BOOTSTRAP DIV')
+  }
+
+  get getElemento() {
+    return this.EstructuraBase?.ATTRIBUTE_NODE;
+  }
+
+
+}
+
+export class Biografia extends EstructuraHTML {
+
+  constructor(Biografia_ID: string, textContent: string) {
+
+    super();
+
+    this.EstructuraBase = this.GenerarEstructura(Biografia_ID, textContent)
+
+    console.log('se esta inyectando. antes de estos deberia ejecutar cuerpo de bootstrap card')
+    this.InyectarEnDropZone(this.EstructuraBase);
+  }
+
+  protected CuerpoBootstrapCARD() {
+    console.log('IMPLEMENTANDO CONTENIDO PERSONALIZADO DE AVATAR DENTRO DE BOOTSTRAP DIV')
+  }
+
+  get getElemento() {
+    return this.EstructuraBase?.ATTRIBUTE_NODE;
+  }
+
+
+}
 
